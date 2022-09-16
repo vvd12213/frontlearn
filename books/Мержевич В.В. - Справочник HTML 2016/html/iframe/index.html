@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;iframe&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;iframe&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>  <p>Элемент <span class="tag">&lt;iframe&gt;</span> создаёт встроенный фрейм, который 
+    находится внутри обычного документа, он позволяет загружать в область заданных 
+    размеров любые другие независимые документы.</p>
+  <p><span class="tag">&lt;iframe&gt;</span> является контейнером, содержание 
+    которого игнорируется браузерами, не поддерживающими данный элемент. Для таких браузеров 
+    можно указать альтернативный текст, который увидят пользователи. Он должен располагаться 
+    между тегами <span class="tag">&lt;iframe&gt;</span> и <span class="tag">&lt;/iframe&gt;</span>.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">&lt;iframe&gt;...&lt;/iframe&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec"> <dl class="param">
+    <dt><a href="align.html">align</a></dt>
+    <dd>Определяет, как фрейм будет выравниваться по краю, а также способ обтекания 
+      его текстом. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="allowfullscreen.html">allowfullscreen</a></dt><br>
+    <dd>Разрешает для фрейма полноэкранный режим.</dd>
+    <dt><a href="allowtransparency.html">allowtransparency</a></dt><br>
+    <dd>Устанавливает прозрачный фон фрейма, через который виден фон страницы.  <span class="attr-NonStandard"></span></dd>
+    <dt><a href="frameborder.html">frameborder</a></dt>
+    <dd>Устанавливает, отображать границу вокруг фрейма или нет. <span class="attr-HTML4"></span></dd>
+    <dt><a href="height.html">height</a></dt>
+    <dd>Высота фрейма.</dd>
+    <dt><a href="hspace.html">hspace</a></dt>
+    <dd> Горизонтальный отступ от фрейма до окружающего контента. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="marginheight.html">marginheight</a></dt>
+    <dd>Отступ сверху и снизу от содержания до границы фрейма. <span class="attr-HTML4"></span></dd>
+    <dt><a href="marginwidth.html">marginwidth</a></dt>
+    <dd>Отступ слева и справа от содержимого до границы фрейма. <span class="attr-HTML4"></span></dd>
+    <dt><a href="name.html">name</a></dt>
+    <dd>Имя фрейма.</dd>
+    <dt><a href="sandbox.html">sandbox</a></dt>
+    <dd>Позволяет задать ряд ограничений на контент загружаемый во фрейме. <span class="attr-HTML5"></span></dd>
+    <dt><a href="scrolling.html">scrolling</a></dt>
+    <dd>Способ отображения полосы прокрутки во фрейме.</dd>
+    <dt><a href="seamless.html">seamless</a></dt>
+    <dd>Определяет, что содержимое фрейма должно отображаться так, словно оно является частью документа. <span class="attr-HTML5"></span></dd>
+    <dt><a href="src.html">src</a></dt>
+    <dd>Путь к файлу, содержимое которого будет загружаться во фрейм.</dd>
+    <dt><a href="srcdoc.html">srcdoc</a></dt>
+    <dd>Хранит содержимое фрейма непосредственно в атрибуте. <span class="attr-HTML5"></span></dd>
+    <dt><a href="vspace.html">vspace</a></dt>
+    <dd>Вертикальный отступ от фрейма до окружающего контента. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="width.html">width</a></dt>
+    <dd>Ширина фрейма.</dd>
+  </dl></section><h2>Пример</h2><section class="spec">  <pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;IFRAME&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;  
+ &lt;iframe src=&quot;page/banner.html&quot; width=&quot;468&quot; height=&quot;60&quot; align=&quot;left&quot;&gt;
+    Ваш браузер не поддерживает встроенные фреймы!
+ &lt;/iframe&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://html.spec.whatwg.org/multipage/the-iframe-element.html#the-iframe-element" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-iframe-element" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/present/frames.html#h-16.5" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

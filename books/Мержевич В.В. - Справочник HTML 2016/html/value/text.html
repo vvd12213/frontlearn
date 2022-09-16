@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Текст</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Текст</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>2.1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div><p>Текстовая строка должна браться в двойные или одинарные кавычки. Если внутри строки требуется оставить одну или несколько кавычек, то можно комбинировать типы кавычек или добавить перед кавычкой слэш (\).</p>
+<pre><code data-language="html">text=&quot;Пример текста с двойными кавычками&quot;
+text='Пример текста с одинарными кавычками'
+text='Гостиница &quot;Турист&quot;'
+text=&quot;Гостиница 'Турист'&quot;
+text=&quot;Гостиница \&quot;Турист\&quot;&quot;</code></pre>
+<p>В данном примере в третьей строке применяются одинарные кавычки, а слово «Турист» взято в двойные кавычки. В четвёртой строке всё с точностью до наоборот, в пятой же строке используются только двойные кавычки, но внутренние экранированы с помощью слэша. </p>
+<p>Если используется лишь одно слово, то кавычки не обязательны. </p>
+<pre><code data-language="html">text=Пример</code></pre><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!doctype html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Текст&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;img src=&quot;images/xxx.jpg&quot; alt=&quot;Три икса&quot;&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

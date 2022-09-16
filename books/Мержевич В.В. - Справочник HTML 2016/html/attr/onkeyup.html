@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Событие onkeyup</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Событие onkeyup</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div> <p>Событие <span class="attribute">onkeyup</span>  возникает в момент отпускания нажатой клавиши. </p><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">onkeyup=&quot;&lt;скрипт&gt;&quot;</code></pre></section><h2>Значения</h2><section class="spec">  <p>См. <a href="../value/script.html">скрипт</a>.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Событие onkeyup&lt;/title&gt;
+  &lt;style&gt;
+   #msg { 
+    color: red; /* Цвет текста */ 
+    display: none; /* Прячем сообщение */
+   }
+  &lt;/style&gt;
+  &lt;script&gt;
+   function validForm(f) {
+    // Если введено число, то скрываем предупреждение
+    if (isDigit(f.value)) document.getElementById(&quot;msg&quot;).style.display = &quot;none&quot;;
+    // В противном случае отображаем предупреждение
+    else document.getElementById(&quot;msg&quot;).style.display = &quot;inline&quot;;
+   }
+   // Функция по проверке, число введено или нет
+   function isDigit(data) {
+    var numStr=&quot;0123456789&quot;;
+    var k = 0;
+    for (i=0;i&lt;data.length;i++) {
+      thisChar = data.substring(i, i+1);
+      if (numStr.indexOf(thisChar) != -1) k++;
+    }
+    if (k == data.length) return 1;
+    else return 0;
+   }
+  &lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;form action=&quot;&quot;&gt;
+   &lt;p&gt;Введите любое число.&lt;/p&gt;
+   &lt;p&gt;&lt;input type=&quot;text&quot; name=&quot;num&quot; onkeyup=&quot;validForm(this)&quot;&gt; 
+      &lt;span id=&quot;msg&quot;&gt;Вы ошиблись. Пожалуйста, введите число.&lt;/span&gt;&lt;/p&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>В данном примере по мере набора символов в текстовом поле происходит проверка  на ввод цифр. Если введена буква, пробел или другой символ отличный от цифры,  то показывается предупреждение об ошибке (рис.&nbsp;1).</p>
+<p class="fig"><img src="../../assets/images/html/attribute_onkeyup.png" alt="Использование события onkeyup для проверки данных формы" width="567" height="248"></p>
+<p class="figsign">Рис. 1. Использование события onkeyup для проверки данных формы</p></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

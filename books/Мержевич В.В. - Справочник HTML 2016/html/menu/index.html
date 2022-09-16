@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;menu&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;menu&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="warn"><span>8</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="no"><span></span></td>
+			<td class="warn"><span>8</span></td>
+			<td class="no"><span></span></td>
+			<td class="no"><span></span></td>
+		  </tr>
+		</table>
+	</div>
+</div>  <p>Элемент <span class="tag">&lt;menu&gt;</span> предназначен для отображения списка пунктов  меню. Аналогично элементам <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span> внутри контейнера <span class="tag">&lt;menu&gt;</span>  список формируется с помощью <span class="tag">&lt;li&gt;</span>.</p>
+  <p>В HTML4 элемент <span class="tag">&lt;menu&gt;</span>  вышел из употребления, вместо него рекомендуется использовать <span class="tag">&lt;ul&gt;</span>. В HTML5 элемент <span class="tag">&lt;menu&gt;</span> вновь включен, но уже в другом качестве. Теперь он выступает контейнером для элемента <span class="tag">&lt;command&gt;</span> и создания меню.</p><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;menu&gt;
+  &lt;li&gt;пункт меню&lt;/li&gt;
+  &lt;li&gt;пункт меню&lt;/li&gt;
+&lt;/menu&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec">  <dl class="param">
+    <dt><a href="label.html">label</a></dt>
+    <dd>Устанавливает видимую метку для  меню. </dd>
+    <dt><a href="type.html">type</a></dt>
+    <dd>Задаёт тип меню.</dd></dl></section><h2>Пример</h2><section class="spec">  <pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; 
+  &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;MENU&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;strong&gt;В этом выпуске:&lt;/strong&gt;&lt;/p&gt;
+  &lt;menu&gt;
+   &lt;li&gt;Русская кухня. Уха бурлацкая&lt;/li&gt;
+   &lt;li&gt;Украинская кухня. Вареники&lt;/li&gt;
+   &lt;li&gt;Молдавская кухня. Паприкаш&lt;/li&gt;
+   &lt;li&gt;Кавказская кухня. Суп-харчо&lt;/li&gt;
+   &lt;li&gt;Прибалтийская кухня. Вертиняй&lt;/li&gt;
+  &lt;/menu&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+ <p>Результат данного примера показан на рис. 1.</p>
+  <p class="fig"><img src="../../assets/images/html/tag_menu.png" alt="Вид списка, созданного с помощью menu" width="566" height="311" /></p>
+  <p class="figsign">Рис. 1. Вид списка, созданного с помощью  &lt;menu&gt;</p>
+
+<pre class="no-result"><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;MENU&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;menu type=&quot;toolbar&quot;&gt;
+   &lt;li&gt;
+    &lt;menu label=&quot;Файл&quot;&gt;
+      &lt;button type=&quot;button&quot;&gt;Новый...&lt;/button&gt;
+      &lt;button type=&quot;button&quot;&gt;Открыть...&lt;/button&gt;
+      &lt;button type=&quot;button&quot;&gt;Сохранить&lt;/button&gt;
+    &lt;/menu&gt;
+   &lt;/li&gt;
+   &lt;li&gt;
+     &lt;menu label=&quot;Правка&quot;&gt;
+      &lt;button type=&quot;button&quot;&gt;Копировать&lt;/button&gt;
+      &lt;button type=&quot;button&quot;&gt;Вырезать&lt;/button&gt;
+      &lt;button type=&quot;button&quot;&gt;Вставить&lt;/button&gt;
+     &lt;/menu&gt;
+    &lt;/li&gt;
+  &lt;/menu&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Примечание</h2><section class="spec"><p>Firefox поддерживает только создание контекстного меню, когда значение атрибута <span class="attribute">type</span> равно <span class="value">context</span>.</p></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-menu-element" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element" hreflang="en" lang="en">HTML5.1</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

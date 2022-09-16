@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;big&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;big&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p> Элемент <span class="tag">&lt;big&gt;</span> увеличивает размер шрифта на единицу 
+    по сравнению с обычным текстом. В HTML размер шрифта измеряется в условных единицах 
+    от 1 до 7, средний размер текста, используемый по умолчанию, принят 3. Таким 
+    образом, добавление <span class="tag">&lt;big&gt;</span> увеличивает текст 
+    на одну условную единицу. Допускается применение вложенных элементов <span class="tag">&lt;big&gt;</span>, 
+    при этом размер шрифта будет больше с каждым уровнем.</p>
+<p class=note>Это нестандартный элемент, вместо него используйте стили.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">&lt;big&gt;Текст&lt;/big&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec"> <p>Для этого элемента доступны <a href="../attr/common.html">универсальные атрибуты</a> и <a href="../attr/event.html">события</a>.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;BIG&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;p&gt;Реферат по психологии&lt;/p&gt;
+  &lt;p&gt;&lt;big&gt;Тема: «Депрессивный бихевиоризм: основные моменты»&lt;/big&gt;&lt;/p&gt;
+  &lt;p&gt;Роджерс первым ввел в научный обиход понятие «клиент», 
+     так как идентификация понимает гомеостаз в силу которого смешивает 
+     субъективное и объективное, переносит свои внутренние побуждения 
+     на реальные связи вещей.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан ниже.</p>
+ <p class="fig"><img src="../../assets/images/html/tag_big.png" alt="Вид текста при использовании big" width="670" height="321"></p>
+  <p class="figsign">Рис. 1. Вид текста при использовании &lt;big&gt;</p></section><h2>Примечание</h2><section class="spec"><p>Для увеличения размера шрифта используйте стилевое свойство <span class="attribute">font-size</span>.
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;big&lt;/title&gt;
+  &lt;style&gt;
+   .big {
+    font-size: 2em;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p class=&quot;big&quot;&gt;Реферат по психологии&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

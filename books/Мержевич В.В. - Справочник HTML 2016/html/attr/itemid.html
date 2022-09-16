@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут itemid</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут itemid</h1>
+
+		<p>Атрибут <span class="attribute">itemid</span> определяет уникальный глобальный идентификатор элемента для микроданных. Применяется только к таким элементам, у которых одновременно заданы атрибуты <span class="attribute">itemscope</span> и <span class="attribute">itemtype</span>. Кроме того, <span class="attribute">itemid</span> допустимо использовать со словарями, поддерживающих глобальные идентификаторы. К примеру, для словаря http://schema.org/Book, который описывает книги, в качестве идентификатора может служить ISBN&nbsp;— уникальный международный номер книжного издания.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">itemid=URL</code></pre></section><h2>Значения</h2><section class="spec"><p>В качестве значения указывается относительный или абсолютный адрес документа, который служит идентификатором. Кроме того, допустимо задавать и обычный текст.</p></section><h2>Значение по умолчанию</h2><section class="spec"><p>Нет.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;itemid&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div itemscope itemtype=&quot;http://schema.org/Book&quot; itemid=&quot;isbn:978-5-17-075250-8&quot;&gt;
+  &lt;h2 itemprop=&quot;name&quot;&gt;Игра престолов&lt;/h2&gt;
+  &lt;div itemprop=&quot;author&quot;&gt;Джордж Мартин&lt;/div&gt;
+  &lt;div itemprop=&quot;bookFormat&quot;&gt;Твёрдый переплёт&lt;/div&gt;
+  &lt;div itemprop=&quot;description&quot;&gt;Эпическая, чеканная сага о мире Семи Королевств. 
+   О мире суровых земель вечного холода и радостных земель вечного лета. Мире лордов и 
+   героев, воинов и магов, чернокнижников и убийц — всех, кого свела воедино Судьба во 
+   исполнение древнего пророчества. О мире опасных приключений, великих деяний и 
+   тончайших политических интриг.&lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.w3.org/TR/microdata/#attr-itemid" hreflang="en" lang="en">HTML Microdata</a></td>
+      <td><span>W3C Working Group Note</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

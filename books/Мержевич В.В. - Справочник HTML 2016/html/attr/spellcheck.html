@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут spellcheck</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут spellcheck</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>11.5</span></td>
+      <td class="yes"><span>5.1</span></td>
+      <td class="yes"><span>2</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>2</span></td>
+			<td class="yes"><span>12</span></td>
+			<td class="yes"><span>3.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div><p>Указывает браузеру проверять или нет правописание и грамматику  в тексте. Хотя атрибут можно устанавливать практически для всех элементов,  результат будет заметен только для полей форм (<span class="tag">&lt;input&gt;</span>, <span class="tag">&lt;textarea&gt;</span>), а также редактируемых  элементов (у них установлен атрибут <a href="../attr/contenteditable.html">contenteditable</a>).</p>
+<p>Браузер может не поддерживать проверку орфографии или она может быть отключена. Например, для Chrome проверка настраивается следующим образом.</p>
+
+<ol>
+  <li>   Откройте меню Chrome <img src="../../assets/images/html/chrome_option.png" width="29" height="29" alt="Меню Chrome">  на панели инструментов браузера.</li>
+  <li> Выберите пункт «Настройки».</li>
+  <li> Нажмите «Показать дополнительные настройки».</li>
+  <li> В разделе «Языки» выберите «Настройка языков и способов ввода».</li>
+  <li> В открывшемся диалоговом окне «Языки» установите или снимите флажок «Включить проверку правописания» (рис.&nbsp;1). </li>
+</ol>
+<p class="fig"><img src="../../assets/images/html/chrome_spellcheck.png" alt="Включение проверки правописания" width="692" height="584"></p>
+<p class="figsign">Рис. 1. Включение проверки правописания</p>
+<p>При включении проверки слова с ошибками подчёркиваются красной волнистой линией.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">spellcheck=&quot;true | false&quot;</code></pre></section><h2>Значения</h2><section class="spec"> <dl class="param2">
+    <dt>true</dt>
+    <dd>Включает режим проверки правописания. </dd>
+    <dt>false</dt>
+    <dd>Отключает проверку.  </dd>
+  </dl>
+  <p>Вместо <span class="value">true</span> допустимо указывать пустое значение (<span class=var>spellcheck=&quot;&quot;</span>) или вообще его не писать (<span class="var">spellcheck</span>).</p></section><h2>Значение по умолчанию</h2><section class="spec"><p>Зависит от настроек браузера.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;spellcheck&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p contenteditable=&quot;true&quot; spellcheck=&quot;false&quot;&gt;
+   Не лѣпо ли ны бяшетъ, братіе, начяти 
+   старыми словесы трудныхъ повѣстій 
+   о пълку Игоревѣ, Игоря Святъславлича?&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Примечание</h2><section class="spec"><p>В мобильных браузерах отключение проверки орфографии <span class=var>spellcheck=&quot;false&quot;</span> не даёт эффекта, слова с ошибками подчёркиваются красной волнистой линией.</p></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://html.spec.whatwg.org/multipage/interaction.html#spelling-and-grammar-checking" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/html/wg/drafts/html/master/editing.html#spelling-and-grammar-checking" hreflang="en" lang="en">HTML5.1</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

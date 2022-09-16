@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;frameset&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;frameset&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p> Определяет структуру фреймов на веб-странице. Фреймы разделяют окно браузера 
+    на отдельные области, расположенные вплотную друг к другу. В каждую из таких 
+    областей загружается самостоятельная веб-страница, определяемая с помощью элемента <span class="tag">&lt;frame&gt;</span>. С помощью фреймов веб-страница делится 
+    на два или более документа, которые обычно содержат навигацию по сайту и его 
+    контент. Механизм фреймов позволяет открывать документ в одном фрейме, по ссылке, 
+    нажатой в совершенно другом фрейме. Элемент <span class="tag">&lt;frameset&gt;</span> заменяет собой <span class="tag">&lt;body&gt;</span> на веб-странице. 
+    Допустимо использовать вложенную структуру элементов, это позволяет разбить 
+    один фрейм на две и более области.</p>
+  <p>При использовании фреймов примите во внимание их следующие особенности.</p>
+  <ul>
+    <li>Поисковые системы плохо работают с фреймовой структурой, поскольку на страницах, 
+      которые содержат контент, обычно нет ссылок на другие документы. </li>
+    <li>Фреймы скрывают адрес страницы на которой находится посетитель и устанавливаемый 
+      через элемент <span class="tag">&lt;title&gt;</span>, и всегда показывают только адрес 
+      сайта. По этой причине понравившуюся страницу невозможно поместить в раздел 
+      &laquo;Избранное&raquo; браузера.</li>
+    <li>Пользователь зачастую оказывается на сайте, совершенно не представляя, куда 
+      он попал, потому что всего лишь нажал на ссылку, полученную в поисковой системе. 
+      Чтобы посетителю сайта было проще разобраться, где он находится, на каждую 
+      страницу помещают название сайта, заголовок страницы и навигацию. Фреймы, 
+      как правило, нарушают данный принцип, отделяя заголовок сайта от содержания, 
+      а навигацию от контента. Представьте, что вы нашли подходящую ссылку в поисковой 
+      системе, нажимаете на неё, а в итоге открывается документ без названия и навигации. 
+      Чтобы понять, где мы находимся или посмотреть другие материалы, придётся редактировать 
+      путь в адресной строке, что в любом случае доставляет неудобство.</li>
+    <li>Большое число фреймов требует для браузера выделения больше памяти, чем 
+      обычно. </li>
+  </ul>
+<p class=note>Данный элемент устарел, не используйте его.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">&lt;frameset&gt;
+  &lt;frame&gt;
+&lt;/frameset&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec"> <dl class="param">
+    <dt><a href="border.html">border</a></dt>
+    <dd>Толщина границы между фреймами. </dd>
+    <dt><a href="bordercolor.html">bordercolor</a></dt>
+    <dd>Цвет линии границы. </dd>
+    <dt><a href="cols.html">cols</a></dt>
+    <dd>Устанавливает ширину или пропорции фреймов в виде колонок. </dd>
+    <dt><a href="frameborder.html">frameborder</a></dt>
+    <dd>Определяет, отображать рамку вокруг фрейма или нет.</dd>
+    <dt><a href="rows.html">rows</a></dt>
+    <dd>Задаёт размер или пропорции фреймов в виде строк. </dd>
+  </dl></section><h2>Пример</h2><section class="spec"> <pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot;
+  &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;FRAMESET&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;frameset rows=&quot;80,*&quot; cols=&quot;*&quot;&gt;
+   &lt;frame src=&quot;page/top.html&quot; name=&quot;topFrame&quot; scrolling=&quot;no&quot; noresize&gt;
+   &lt;frameset cols=&quot;80,*&quot;&gt;
+     &lt;frame src=&quot;page/left.html&quot; name=&quot;leftFrame&quot; scrolling=&quot;no&quot; noresize&gt;
+     &lt;frame src=&quot;page/main.html&quot; name=&quot;mainFrame&quot;&gt;
+   &lt;/frameset&gt;
+ &lt;/frameset&gt;
+&lt;/html&gt;</code></pre>
+  <p>Некоторые примеры организации фреймов приведены ниже.</p>
+  <table>
+    <tr>
+      <td style="width: 49%; padding-right: 5px"><table style="width:100%" class="data">
+          <tr>
+            <td style="background:#f0f0f0">Фрейм 1</td>
+            <td style="background:#FFCC99">Фрейм 2</td>
+          </tr>
+          <tr>
+            <td style="background:#f0f0f0">Фрейм 3</td>
+            <td style="background:#FFCC99">Фрейм 4</td>
+          </tr>
+          <tr>
+            <td style="background:#f0f0f0">Фрейм 5</td>
+            <td style="background:#FFCC99">Фрейм 6</td>
+          </tr>
+      </table></td>
+      <td style="width: 49%; padding-left: 5px; vertical-align: top"><table style="width:100%" class="data">
+          <tr>
+            <td rowspan="2" style="width:28%; background:#f0f0f0">Фрейм 1</td>
+            <td style="width:72%; background:#FFCC99">Фрейм 2</td>
+          </tr>
+          <tr>
+            <td>Фрейм 3</td>
+          </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td><pre style="margin: 0 5px 0 0"><code data-language="html">&lt;frameset rows=&quot;33%,33%,*&quot; cols=&quot;50%, 50%&quot;&gt;
+ &lt;frame src=&quot;r1c1.html&quot; name=&quot;Фрейм 1&quot;&gt;
+ &lt;frame src=&quot;r1c2.html&quot; name=&quot;Фрейм 2&quot;&gt;
+ &lt;frame src=&quot;r2c1.html&quot; name=&quot;Фрейм 3&quot;&gt;
+ &lt;frame src=&quot;r2c2.html&quot; name=&quot;Фрейм 4&quot;&gt;
+ &lt;frame src=&quot;r3c1.html&quot; name=&quot;Фрейм 5&quot;&gt;
+ &lt;frame src=&quot;r3c2.html&quot; name=&quot;Фрейм 6&quot;&gt;
+&lt;/frameset&gt;</code></pre>      </td>
+      <td style="vertical-align: top"><pre style="margin-left: 5px"><code data-language="html">&lt;frameset rows=&quot;*&quot; cols=&quot;80,*&quot;&gt;
+ &lt;frame src=&quot;frame1.html&quot; name=&quot;Фрейм 1&quot;&gt;
+ &lt;frameset rows=&quot;80,*&quot;&gt;
+   &lt;frame src=&quot;frame2.html&quot; name=&quot;Фрейм 2&quot;&gt;
+   &lt;frame src=&quot;frame3.html&quot; name=&quot;Фрейм 3&quot;&gt;
+ &lt;/frameset&gt;
+&lt;/frameset&gt;</code></pre>      </td>
+    </tr>
+  </table></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/present/frames.html#h-16.2.1" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

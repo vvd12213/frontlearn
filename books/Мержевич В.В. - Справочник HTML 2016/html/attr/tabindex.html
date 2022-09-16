@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут tabindex</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут tabindex</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div> <p>Атрибут <span class="attribute">tabindex</span> устанавливает порядок получения фокуса при переходе между элементами с помощью  клавиши <kbd>Tab</kbd>. Переход происходит от меньшего значения к большему, например от 1  к 2, затем к 3 и так далее. При этом строгая последовательность не важна,  допускается пропускать какие-то числа и начинать с любой цифры. Если значения  <span class="attribute">tabindex</span> у элементов совпадают, тогда учитывается их порядок появления в коде.  Заблокированные элементы (у которых установлен атрибут <span class="attribute">disabled</span>) не участвуют в  переходе и фокус не получают.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">tabindex=&quot;&lt;число&gt;&quot;</code></pre></section><h2>Значения</h2><section class="spec"><p>Любое целое число.</p>
+<p>Отрицательное значение говорит, что элемент может получить фокус, но к нему нельзя перейти с помощью клавиатуры.</p>
+<p>Ноль, неверное значение или когда атрибут <span class="attribute">tabindex</span> не задан означает, что к элементу можно перейти с помощью клавиатуры, но переход происходит после всех «нумерованных» элементов в том  порядке, как они указаны в коде.</p>
+<p>Положительное значение определяет порядок элемента в последовательности перехода через клавиатуру: чем больше число, тем больше раз требуется нажать <kbd>Tab</kbd> для перехода к элементу.</p>
+
+<p class="note">Максимальное значение не должно превышать 32767.</p></section><h2>Значение по умолчанию</h2><section class="spec"><p> 0</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Атрибут tabindex&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Нажмите кнопку Tab для перехода между элементами&lt;/p&gt;
+  &lt;p&gt;&lt;button&gt;Шестой&lt;/button&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button&gt;Седьмой&lt;/button&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button tabindex=&quot;5&quot;&gt;Пятый&lt;/button&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button tabindex=&quot;1&quot;&gt;Первый&lt;/button&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button tabindex=&quot;3&quot;&gt;Третий&lt;/button&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button tabindex=&quot;2&quot;&gt;Второй&lt;/button&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button tabindex=&quot;4&quot;&gt;Четвертый&lt;/button&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://html.spec.whatwg.org/multipage/editing.html#attr-tabindex" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/html/wg/drafts/html/master/editing.html#attr-tabindex" hreflang="en" lang="en">HTML5.1</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/editing.html#attr-tabindex" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/interact/forms.html#adef-tabindex" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

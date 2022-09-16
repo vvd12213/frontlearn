@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;textarea&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;textarea&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p><span class="tag">&lt;textarea&gt;</span> представляет собой элемент 
+    формы для создания области, в которую можно вводить несколько строк текста. 
+    В отличие от элемента <span class="tag">&lt;input&gt;</span> в текстовом поле допустимо 
+    делать переносы строк, они сохраняются при отправке данных на сервер.</p>
+  <p> Между тегами <span class="tag">&lt;textarea&gt;</span> и <span class="tag">&lt;/textarea&gt;</span> можно поместить любой текст, который будет отображаться внутри поля.</p>
+  <table class=data>
+    <tr>
+      <td style="text-align:center"><textarea></textarea>
+      </td>
+      <td style="text-align:center"><textarea>Поле с исходным текстом</textarea>
+      </td>
+    </tr>
+  </table><h2>Синтаксис</h2><section class="spec">  <pre><code data-language="html">&lt;textarea&gt;
+  текст
+&lt;/textarea&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec">  <dl class="param">
+    <dt><a href="autofocus.html">autofocus</a></dt>
+    <dd>Автоматическое получение фокуса. <span class="attr-HTML5"></span></dd>
+    <dt><a href="cols.html">cols</a></dt>
+    <dd>Ширина поля в символах. </dd>
+    <dt><a href="disabled.html">disabled</a></dt>
+    <dd>Блокирует доступ и изменение элемента.</dd>
+    <dt><a href="form.html">form</a></dt>
+    <dd>Связывает текстовое поле с формой по её идентификатору. <span class="attr-HTML5"></span></dd>
+    <dt><a href="maxlength.html">maxlength</a></dt>
+    <dd>Максимальное число введённых символов. <span class="attr-HTML5"></span></dd>
+    <dt><a href="name.html">name</a></dt>
+    <dd>Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать.</dd>
+    <dt><a href="placeholder.html">placeholder</a></dt>
+    <dd>Добавляет подсказывающий текст. <span class="attr-HTML5"></span></dd>
+    <dt><a href="readonly.html">readonly</a></dt>
+    <dd>Устанавливает, что поле не может изменяться пользователем.</dd>
+    <dt><a href="required.html">required</a></dt>
+    <dd>Обязательное для заполнения поле. <span class="attr-HTML5"></span></dd>
+    <dt><a href="rows.html">rows</a></dt>
+    <dd>Высота поля в строках текста.</dd>
+    <dt><a href="wrap.html">wrap</a></dt>
+    <dd>Параметры переноса строк. <span class="attr-HTML5"></span></dd>
+  </dl>
+<p class="more">Также для этого элемента доступны <a href="../attr/common.html">универсальные атрибуты</a> и <a href="../attr/event.html">события</a>.</p></section><h2>Пример</h2><section class="spec">  <pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;TEXTAREA&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;form action=&quot;textarea1.php&quot; method=&quot;post&quot;&gt;
+    &lt;p&gt;&lt;b&gt;Введите ваш отзыв:&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;textarea rows=&quot;10&quot; cols=&quot;45&quot; name=&quot;text&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Отправить&quot;&gt;&lt;/p&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://html.spec.whatwg.org/multipage/the-button-element.html#the-textarea-element" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/forms.html#the-textarea-element" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.7" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

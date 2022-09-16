@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;table&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;table&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p> <span class="tag">&lt;table&gt;</span> служит контейнером для элементов, 
+    определяющих содержимое таблицы. Любая таблица состоит из строк и ячеек, которые 
+    задаются с помощью элементов <span class="tag">&lt;tr&gt;</span> и <span class="tag">&lt;td&gt;</span>. 
+    Внутри <span class="tag">&lt;table&gt;</span> допустимо использовать следующие элементы: <span class="tag">&lt;caption&gt;</span>, <span class="tag">&lt;col&gt;</span>, <span class="tag">&lt;colgroup&gt;</span>, <span class="tag">&lt;tbody&gt;</span>, <span class="tag">&lt;td&gt;</span>, <span class="tag">&lt;tfoot&gt;</span>, <span class="tag">&lt;th&gt;</span>, <span class="tag">&lt;thead&gt;</span> и <span class="tag">&lt;tr&gt;</span>.</p>
+  <p>Таблицы с невидимой границей долгое время использовались для верстки веб-страниц, 
+    позволяя разделять документ на модульные блоки. Подобный способ применения таблиц 
+    нашёл воплощение на многих сайтах, пока ему на смену не пришли более современные 
+    способы вёрстки.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec">   <dl class="param">
+    <dt><a href="align.html">align</a></dt>
+    <dd>Определяет выравнивание таблицы. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="background.html">background</a></dt>
+    <dd>Задаёт фоновый рисунок в таблице. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="bgcolor.html">bgcolor</a></dt>
+    <dd>Цвет фона таблицы. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="border.html">border</a></dt>
+    <dd>Толщина рамки в пикселях. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="bordercolor.html">bordercolor</a></dt>
+    <dd>Цвет рамки. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="cellpadding.html">cellpadding</a></dt>
+    <dd>Отступ от рамки до содержимого ячейки. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="cellspacing.html">cellspacing</a></dt>
+    <dd>Расстояние между ячеек. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="cols.html">cols</a></dt>
+    <dd>Число колонок в таблице. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="frame.html">frame</a></dt>
+    <dd>Сообщает браузеру, как отображать границы вокруг таблицы. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="rules.html">rules</a></dt>
+    <dd>Сообщает браузеру, где отображать границы между ячеек. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="summary.html">summary</a></dt>
+    <dd>Краткое описание таблицы. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="width.html">width</a></dt>
+    <dd>Ширина таблицы. <span class="attr-Obsolete"></span></dd>
+  </dl>
+<p class="more">Также для этого элемента доступны <a href="../attr/common.html">универсальные атрибуты</a> и <a href="../attr/event.html">события</a>.</p></section><h2>Пример</h2><section class="spec">  <pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Таблица размеров обуви&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;table&gt;
+   &lt;caption&gt;Таблица размеров обуви&lt;/caption&gt;
+   &lt;tr&gt;
+    &lt;th&gt;Россия&lt;/th&gt;
+    &lt;th&gt;Великобритания&lt;/th&gt;
+    &lt;th&gt;Европа&lt;/th&gt;
+    &lt;th&gt;Длина ступни, см&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;34,5&lt;/td&gt;&lt;td&gt;3,5&lt;/td&gt;&lt;td&gt;36&lt;/td&gt;&lt;td&gt;23&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;35,5&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;36⅔&lt;/td&gt;&lt;td&gt;23–23,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;36&lt;/td&gt;&lt;td&gt;4,5&lt;/td&gt;&lt;td&gt;37⅓&lt;/td&gt;&lt;td&gt;23,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;36,5&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;38&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;37&lt;/td&gt;&lt;td&gt;5,5&lt;/td&gt;&lt;td&gt;38⅔&lt;/td&gt;&lt;td&gt;24,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;38&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;39⅓&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;38,5&lt;/td&gt;&lt;td&gt;6,5&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;25,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;39&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;40⅔&lt;/td&gt;&lt;td&gt;25,5–26&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;7,5&lt;/td&gt;&lt;td&gt;41⅓&lt;/td&gt;&lt;td&gt;26&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;40,5&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;42&lt;/td&gt;&lt;td&gt;26,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;41&lt;/td&gt;&lt;td&gt;8,5&lt;/td&gt;&lt;td&gt;42⅔&lt;/td&gt;&lt;td&gt;27&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;42&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;43⅓&lt;/td&gt;&lt;td&gt;27,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;43&lt;/td&gt;&lt;td&gt;9,5&lt;/td&gt;&lt;td&gt;44&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;43,5&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;44⅔&lt;/td&gt;&lt;td&gt;28–28,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;44&lt;/td&gt;&lt;td&gt;10,5&lt;/td&gt;&lt;td&gt;45⅓&lt;/td&gt;&lt;td&gt;28,5–29&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;44,5&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;46&lt;/td&gt;&lt;td&gt;29&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;45&lt;/td&gt;&lt;td&gt;11,5&lt;/td&gt;&lt;td&gt;46⅔&lt;/td&gt;&lt;td&gt;29,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;46&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;47⅓&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;46,5&lt;/td&gt;&lt;td&gt;12,5&lt;/td&gt;&lt;td&gt;48&lt;/td&gt;&lt;td&gt;30,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;47&lt;/td&gt;&lt;td&gt;13&lt;/td&gt;&lt;td&gt;48⅔&lt;/td&gt;&lt;td&gt;31&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;48&lt;/td&gt;&lt;td&gt;13,5&lt;/td&gt;&lt;td&gt;49⅓&lt;/td&gt;&lt;td&gt;31,5&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../../assets/images/html/tag_table_2.png" alt="Вид таблицы" width="683" height="410"></p>
+<p class="figsign">Рис. 1. Вид таблицы</p></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/tabular-data.html#the-table-element" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/struct/tables.html#edef-TABLE" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут usemap</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут usemap</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div> <p>Атрибут <span class="attribute">usemap</span> связывает между собой картинку и карту-изображение,  задаваемую с помощью контейнера <span class="tag">&lt;map&gt;</span>. В качестве такой связи выступает имя идентификатора,  которое указывается в значении атрибута <span class="attribute">usemap</span>, и то же имя, заданное у  атрибута <span class="attribute">name</span> элемента <span class="tag">&lt;map&gt;</span>.  При этом в <span class="tag">&lt;img&gt;</span>  идентификатор должен начинаться с символа решетки (#).</p><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;img usemap=&quot;#идентификатор&quot;&gt;</code></pre></section><h2>Значения</h2><section class="spec"> <p> Текстовая строка, начинающаяся с символа решётки. </p></section><h2>Значение по умолчанию</h2><section class="spec"> <p> Нет.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+  &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;IMG, атрибут usemap&lt;/title&gt;
+  &lt;style type=&quot;text/css&quot;&gt;
+   #title {
+    line-height: 0; /* Изменяем межстрочное расстояние */
+   }
+   #title img {
+    border: none; /* Убираем рамку вокруг изображения */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+ &lt;div id=&quot;title&quot;&gt;&lt;img src=&quot;image/ecctitle.png&quot; width=&quot;640&quot; height=&quot;158&quot; 
+                 alt=&quot;Детский образовательный центр&quot;&gt;&lt;br&gt;
+  &lt;img src=&quot;image/navigate.png&quot; width=&quot;640&quot; height=&quot;30&quot; alt=&quot;Навигация по сайту&quot;
+       usemap=&quot;#Navigation&quot;&gt;&lt;/div&gt;
+  &lt;p&gt;&lt;map name=&quot;Navigation&quot;&gt;
+  &lt;area shape=&quot;poly&quot; coords=&quot;113,24,211,24,233,0,137,0&quot; href=&quot;page/inform.html&quot; alt=&quot;Информация&quot;&gt;
+  &lt;area shape=&quot;poly&quot; coords=&quot;210,24,233,0,329,0,307,24&quot; href=&quot;page/activity.html&quot; alt=&quot;Мероприятия&quot;&gt;
+  &lt;area shape=&quot;poly&quot; coords=&quot;304,24,385,24,407,0,329,0&quot; href=&quot;page/depart.html&quot; alt=&quot;Отделения&quot;&gt;
+  &lt;area shape=&quot;poly&quot; coords=&quot;384,24,449,24,473,0,406,0&quot; href=&quot;page/techinfo.html&quot; alt=&quot;Техническая информация&quot;&gt;
+  &lt;area shape=&quot;poly&quot; coords=&quot;449,24,501,24,525,0,473,0&quot; href=&quot;page/study.html&quot; alt=&quot;Обучение&quot;&gt;
+  &lt;area shape=&quot;poly&quot; coords=&quot;501,24,560,24,583,0,525,0&quot; href=&quot;page/work.html&quot; alt=&quot;Работа&quot;&gt;
+  &lt;area shape=&quot;poly&quot; coords=&quot;560,24,615,24,639,0,585,0&quot; href=&quot;page/misk.html&quot; alt=&quot;Разное&quot;&gt;
+  &lt;/map&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

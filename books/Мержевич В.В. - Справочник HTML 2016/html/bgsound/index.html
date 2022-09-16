@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;bgsound&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;bgsound&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>4</span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="no"><span>15</span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="no"><span></span></td>
+			<td class="no"><span></span></td>
+			<td class="no"><span></span></td>
+			<td class="no"><span></span></td>
+		  </tr>
+		</table>
+	</div>
+</div> <p> Элемент <span class="tag">&lt;bgsound&gt;</span> определяет музыкальный файл, 
+    который будет проигрываться на веб-странице при её открытии. Громкость, продолжительность 
+    звучания музыки и другие характеристики определяются с помощью атрибутов, 
+    а также могут управляться через скрипты. Этот элемент должен размещаться только 
+    в контейнере <span class="tag">&lt;head&gt;</span>. </p>
+  <p class="note"><span class="tag">&lt;bgsound&gt;</span> не входит в спецификацию HTML и при его использовании код не пройдёт валидацию. </p><h2>Синтаксис</h2><section class="spec">   <pre><code data-language="html">&lt;head&gt;
+  &lt;bgsound атрибуты&gt;
+&lt;/head&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Не обязателен</section><h2>Аттрибуты</h2><section class="spec">   <dl class="param">
+    <dt><a href="balance.html">balance</a></dt>
+    <dd>Управляет балансом звука между правой и левой колонками. </dd>
+    <dt><a href="loop.html">loop</a></dt>
+    <dd>Устанавливает, сколько раз проигрывать музыкальный файл.</dd>
+    <dt><a href="src.html">src</a></dt>
+    <dd>Путь к музыкальному файлу.</dd>
+    <dt><a href="volume.html">volume</a></dt>
+    <dd>Задаёт громкость звучания музыки. </dd>
+  </dl></section><h2>Пример</h2><section class="spec">   <pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; 
+  &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;BGSOUND&lt;/title&gt;
+  &lt;bgsound src=&quot;audio/town.mid&quot; loop=&quot;-1&quot;&gt; 
+ &lt;/head&gt; 
+ &lt;body&gt;
+  ...
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Примечание</h2><section class="spec">  <p>В браузере Internet Explorer можно отключить возможность воспроизведения звуков в свойствах обозревателя. Для этого во вкладке &laquo;Дополнительно&raquo; в блоке &laquo;Мультимедиа&raquo; уберите галочку у пункта &laquo;Воспроизводить звуки на веб-страницах&raquo; (рис.&nbsp;1).</p>
+  <p class="fig"><img src="../../assets/images/html/tag_bgsound_1.png" alt="Отключение звуков в настройках браузера Internet Explorer" width="425" height="590" /></p>
+  <p class="figsign">Рис. 1. Отключение звуков в настройках браузера Internet Explorer</p>
+  <p>В браузере Opera отключить звуки можно через меню Инструменты (рис.&nbsp;2). Настройка применяется после обновления страницы.</p>
+  <p class="fig"><img src="../../assets/images/html/tag_bgsound_2.png" alt="Отключение звука в браузере Opera" width="574" height="323" /></p>
+  <p class="figsign">Рис. 2. Отключение звука в браузере Opera</p>
+
+<p>Для автоматического воспроизведения музыки воспользуйтесь элементом 
+  <a href="../audio/index.html">&lt;audio&gt;</a> с атрибутом <span class="attribute">autoplay</span>.
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;audio&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;audio src=&quot;audio/music.mp3&quot; autoplay&gt;&lt;/audio&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

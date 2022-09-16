@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;plaintext&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;plaintext&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>2</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p>Элемент <span class="tag">&lt;plaintext&gt;</span> отображает содержимое контейнера &laquo;как есть&raquo;.  Пока тег <span class="tag">&lt;plaintext&gt;</span> не  закрыт, все теги внутри него отображаются как обычный текст. Несмотря на то, что все браузеры поддерживают этот тег, он не  входит в спецификацию HTML и его использование осуждается.  </p>
+<p class=note>Это нестандартный элемент, не применяйте его, взамен воспользуйтесь стилями.</p><h2>Синтаксис</h2><section class="spec">  <pre><code data-language="html">&lt;plaintext&gt;Текст&lt;/plaintext&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Не обязателен</section><h2>Аттрибуты</h2><section class="spec"><p>Нет.</p></section><h2>Пример</h2><section class="spec">  <pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; 
+  &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;PLAINTEXT&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Пример программы&lt;/p&gt;
+  &lt;plaintext&gt;
+   &lt;h1&gt;Демонстрация метода Подборского&lt;/h1&gt;
+   while (&lt;&gt;) {
+     $org=$_;
+     s/\\[&quot;']//g;
+     s/\/\/[^:].*//;
+     s/\/\*.*\*\///g;
+     if ($comment == 1) {
+       if (s/.*\*\///) {
+         $comment = 0;
+       }
+       else {
+         next;
+       }
+     }
+     if (s/\/\*.*//) {
+       $comment = 1;
+     }
+     if (/^\s*#/) {
+       next;
+     }
+   }&lt;/plaintext&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <p>Результат данного примера показан ниже.</p>
+  <p class="fig"> <img src="../../assets/images/html/tag_plaintext.png" alt="Вид текста, оформленного с помощью plaintext" width="563" height="615" /></p>
+<p class="figsign">Рис. 1. Вид текста, оформленного с помощью &lt;plaintext&gt; </p></section><h2>Примечание</h2><section class="spec">  <p>Все браузеры игнорируют закрывающий тег и отображают его в  виде текста. Это можно заметить на рис.&nbsp;1, где показан результат  выполнения кода в браузере. Элемент <span class="tag">&lt;plaintext&gt;</span> действует до конца кода веб-страницы, включая  закрывающие теги <span class="tag">&lt;/body&gt;</span>  и <span class="tag">&lt;/html&gt;</span>.</p></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

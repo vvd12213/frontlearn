@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут datetime</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут datetime</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>33</span></td>
+      <td class="yes"><span>22</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>22</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>22</span></td>
+			<td class="yes"><span>11.50</span></td>
+			<td class="yes"><span>4.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>  <p>Устанавливает дату, время или оба значения для текста. Содержимое атрибута напрямую в браузере не отображается.</p>
+<h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;time datetime=&quot;&lt;дата и время&gt;&quot;&gt;текст&lt;/time&gt;</code></pre></section><h2>Значения</h2><section class="spec"><p>Дата и время задаётся в международном формате ISO&nbsp;8601. Примеры оформления приведены в табл.&nbsp;1.</p>
+<table class="data">
+<caption>Табл. 1. Форматы даты и времени</caption>
+  <tr>
+    <th>Значение</th>
+    <th>Формат</th>
+    <th>Пример</th>
+  </tr>
+  <tr>
+    <td>Год</td>
+    <td>ГГГГ</td>
+    <td>2012</td>
+  </tr>
+  <tr>
+    <td>Месяц и год</td>
+    <td>ГГГГ-ММ</td>
+    <td>2012-12</td>
+  </tr>
+  <tr>
+    <td>Полная дата</td>
+    <td>ГГГГ-ММ-ДД</td>
+    <td>2012-12-23</td>
+  </tr>
+  <tr>
+    <td>Дата и время с минутами</td>
+    <td>ГГГГ-ММ-ДДTчч:мм</td>
+    <td>2004-07-24T18:18</td>
+  </tr>
+  <tr>
+    <td>Дата и время с секундами</td>
+    <td>ГГГГ-ММ-ДДTчч:мм:сс</td>
+    <td>2004-07-24T18:18:18</td>
+  </tr>
+  <tr>
+    <td>Дата и время с часовым поясом</td>
+    <td>ГГГГ-ММ-ДДTчч:мм:сс±чч:мм</td>
+    <td>2004-07-24T18:18:18+04:00</td>
+  </tr>
+</table>
+<p>Для каждой единицы существует своя заданная форма и  ограничения.</p>
+<ul>
+  <li>Год &#8212; задается четырьмя цифрами (1860).</li>
+  <li>Месяц &#8212; две цифры (01 &#8212; январь, 02 &#8212; февраль, 12 &#8212; декабрь).</li>
+  <li>День &#8212; две цифры от 01 до 31.</li>
+  <li>Час &#8212; две цифры от 00 до 23.</li>
+  <li>Минуты &#8212; две цифры от 00 до 59.</li>
+  <li>Секунды &#8212; две цифры от 00 до 59.</li>
+  <li>Часовой пояс &#8212; часы и минуты с указанием знака плюс или минус.</li>
+  </ul>
+<p>Дата и время разделяются между собой заглавной латинской буквой T. Часовой пояс при необходимости пишется после времени со знаком плюс или минус. К примеру, для Москвы часовой пояс будет +04:00.</p></section><h2>Значение по умолчанию</h2><section class="spec"><p>Нет.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;datetime&lt;/title&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;article&gt;
+   &lt;p&gt;Опубликовано: &lt;time datetime=&quot;2012-12-23T08:23:11+07:00&quot;&gt;сегодня&lt;/time&gt;&lt;/p&gt;
+   &lt;p&gt;&lt;time&gt;1957-10-04&lt;/time&gt; запущен первый искусственный спутник Земли.&lt;/p&gt;
+   &lt;p&gt;&lt;time&gt;1960-08-19&lt;/time&gt; первый полёт собак в космос.&lt;/p&gt;
+   &lt;p&gt;&lt;time&gt;1961-04-12&lt;/time&gt; первый полёт человека в космос.&lt;/p&gt;
+   &lt;p&gt;&lt;time&gt;1963-06-16&lt;/time&gt; первый полёт женщины-космонавта.&lt;/p&gt;
+   &lt;p&gt;&lt;time&gt;1969-07-21&lt;/time&gt; высадка человека на Луну.&lt;/p&gt;&lt;/article&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

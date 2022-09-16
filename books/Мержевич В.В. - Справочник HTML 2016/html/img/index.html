@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;img&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;img&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p>Элемент <span class="tag">&lt;img&gt;</span> предназначен для отображения на веб-странице 
+    изображений в графическом формате GIF, JPEG, SVG или PNG. Адрес файла с картинкой задаётся через атрибут <span class="attribute">src</span>. Если необходимо, то рисунок можно сделать ссылкой на другой 
+    файл, поместив <span class="tag">&lt;img&gt;</span> в контейнер <span class="tag">&lt;a&gt;</span>. </p>
+  <p> Рисунки также могут применяться в качестве карт-изображений, когда картинка 
+    содержит активные области, выступающие в качестве ссылок. Такая карта по внешнему 
+    виду ничем не отличается от обычного изображения, но при этом оно может быть 
+    разбито на невидимые зоны разной формы, где каждая из областей служит ссылкой. </p><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;img src=&quot;URL&quot; alt=&quot;альтернативный текст&quot;&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Не требуется</section><h2>Аттрибуты</h2><section class="spec">   <dl class="param">
+    <dt><a href="align.html">align</a></dt>
+    <dd>Определяет, как рисунок будет выравниваться по краю и способ обтекания текстом. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="alt.html">alt</a></dt>
+    <dd>Альтернативный текст для изображения. <span class="attr-Required"></span></dd>
+    <dt><a href="border.html">border</a></dt>
+    <dd>Толщина рамки вокруг изображения. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="height.html">height</a></dt>
+    <dd>Высота изображения.</dd>
+    <dt><a href="hspace.html">hspace</a></dt>
+    <dd>Горизонтальный отступ от изображения до окружающего контента. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="ismap.html">ismap</a></dt>
+    <dd>Говорит браузеру, что картинка является серверной картой-изображением.</dd>
+    <dt><a href="longdesc.html">longdesc</a></dt>
+    <dd>Указывает адрес документа, где содержится аннотация к картинке. <span class="attr-HTML5-Obsolete"></span></dd>
+    <dt><a href="sizes.html">sizes</a></dt>
+    <dd>Задаёт размеры изображения для разных макетов страницы. <span class="attr-HTML5"></span></dd>
+    <dt><a href="src.html">src</a></dt>
+    <dd>Путь к графическому файлу. <span class="attr-Required"></span></dd>
+    <dt><a href="srcset.html">srcset</a></dt>
+    <dd>Путь к графическим файлам с учётом размера изображения и устройств. <span class="attr-HTML5"></span></dd>
+    <dt><a href="vspace.html">vspace</a></dt>
+    <dd>Вертикальный отступ от изображения до окружающего контента. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="width.html">width</a></dt>
+    <dd>Ширина изображения.</dd>
+    <dt><a href="usemap.html">usemap</a></dt>
+    <dd>Ссылка на элемент <span class="tag">&lt;map&gt;</span>, содержащий координаты 
+      для клиентской карты-изображения.</dd>
+  </dl>
+<p class="more">Также для этого элемента доступны <a href="../attr/common.html">универсальные атрибуты</a> и <a href="../attr/event.html">события</a>.</p></section><h2>Пример</h2><section class="spec">   <pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;IMG&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;p&gt;&lt;a href=&quot;page/lorem.html&quot;&gt;&lt;img src=&quot;image/girl.jpg&quot; 
+  width=&quot;120&quot; height=&quot;120&quot; alt=&quot;Девочка с муфтой&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-img-element" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/struct/objects.html#h-13.2" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут sizes</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут sizes</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="ed">Edge</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="no"><span></span></td>
+      <td class="yes"><span>13</span></td>
+      <td class="yes"><span>38</span></td>
+      <td class="yes"><span>25</span></td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>38</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="no"><span></span></td>
+			<td class="yes"><span>38</span></td>
+			<td class="yes"><span>35</span></td>
+			<td class="yes"><span>9.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div><p>Задаёт размеры изображения для разных макетов страницы. Разные значения и примеры использования показаны ниже.</p>
+<p>Одно значение ширины. Здесь vw — это ширина в процентах от области просмотра. В качестве значений можно использовать единицы em, ex, ch, rem, vw, vh, vmin, vmax, cm, mm, q, in, pc, pt, px, но не проценты.</p>
+<pre>sizes=&quot;100vw&quot;</pre>
+<p>Медиа-запрос с одним значением ширины. В данном случае в качестве контрольной точки задано 40em.</p>
+<pre>sizes=&quot;(min-width: 40em) 100vw&quot;</pre>
+<p>Список размеров, перечисленный через запятую. В значениях можно указывать медиа-запросы и функцию <span class="attribute">calc()</span>.</p>
+<pre>sizes=&quot;(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)&quot;)</pre><h2>Синтаксис</h2><section class="spec"><pre>[ &lt;размер исходника&gt;# , ]? &lt;значение размера исходника&gt;
+  &lt;медиа-запрос&gt; &lt;значение размера исходника&gt;
+  &lt;размер&gt;</pre>
+<p>&lt;значение размера исходника&gt; не допускает проценты, используйте только единицы vw.</p></section><h2>Значение по умолчанию</h2><section class="spec">  <p> Нет. </p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;sizes&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;img 
+    src=&quot;image/mushroom.jpg&quot;
+    srcset=&quot;image/mushroom_portrait.jpg 350w, image/mushroom_landscape.jpg 650w&quot; 
+    sizes=&quot;(max-width: 600px) 300px, (min-width: 600px) 600px&quot;
+    alt=&quot;&quot;&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере при уменьшении ширины области просмотра браузера до 600 пикселей происходит и уменьшение изображения.</p></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

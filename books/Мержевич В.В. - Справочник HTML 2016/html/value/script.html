@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Скрипт</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Скрипт</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>2.1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p>Скриптом называется программа (обычно на языке JavaScript) выполняемая в браузере. Скрипт в качестве значения применяется к событиям и вызывается при наступлении указанного события. Если скрипт небольшой, его код можно указать прямо в значении, для объёмных скриптов пишется функция и вызывается в значении события.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">событие=&quot;язык: скрипт&quot;</code></pre>
+ <p>В качестве событий выступают следующие атрибуты: <a href="../attr/onblur.html">onblur</a>, <a href="../attr/onchange.html">onchange</a>, <a href="../attr/onclick.html">onclick</a>, <a href="../attr/ondblclick.html">ondblclick</a>, <a href="../attr/onfocus.html">onfocus</a>, <a href="../attr/onkeydown.html">onkeydown</a>, <a href="../attr/onkeypress.html">onkeypress</a>, <a href="../attr/onkeyup.html">onkeyup</a>, <a href="../attr/onload.html">onload</a>, <a href="../attr/onmousedown.html">onmousedown</a>, <a href="../attr/onmousemove.html">onmousemove</a>, <a href="../attr/onmouseout.html">onmouseout</a>, <a href="../attr/onmouseover.html">onmouseover</a>, <a href="../attr/onmouseup.html">onmouseup</a>, <a href="../attr/onreset.html">onreset</a>, <a href="../attr/onselect.html">onselect</a>, <a href="../attr/onsubmit.html">onsubmit</a>, <a href="../attr/onunload.html">onunload</a>.</p>
+  <p>Язык определяет язык программирования, на котором написан скрипт, может принимать следующие значения:</p>
+  <ul>
+    <li>    	<span class="value">javascript</span> — JavaScript;</li>
+    <li> <span class="value">jscript</span> — JScript, разновидность языка JavaScript разработанная компанией Microsoft;</li>
+    <li> <span class="value">vbscript</span> — язык программирования VBScript основанный на Visual Basic.</li>
+  </ul>
+  <p>По умолчанию значением выступает <span class="value">javascript</span>.</p>
+  <p>Также допускается указывать скрипт в качестве значения атрибута <span class="attribute">href</span> элемента <span class="tag">&lt;a&gt;</span>, но предваряя скрипт ключевым словом <span class="value">javascript:</span>, в противном случае браузер будет воспринимать значение как ссылку. Вместо <span class="value">javascript</span> пишется нужный язык программирования скрипта.</p></section><h2>Пример</h2><section class="spec"> <pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Скрипты&lt;/title&gt;
+  &lt;style&gt;
+   #msg { 
+    display: none;
+    position: absolute;
+    width: 280px;
+    top: 200px;
+    left: 50%;
+    margin-left: -150px; 
+    background: #fc0;
+    padding: 10px;
+   }
+   a { color: blue; cursor: pointer; }
+  &lt;/style&gt;
+  &lt;script&gt;
+   function textMsg(msg) {
+    document.getElementById('text').innerHTML = msg;
+    document.getElementById('msg').style.display = 'block';
+   }
+   function closeMsg() {
+    document.getElementById('msg').style.display = 'none';
+   }
+  &lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div id=&quot;msg&quot;&gt;
+   &lt;div id=&quot;text&quot;&gt;&lt;/div&gt;
+   &lt;div id=&quot;close&quot;&gt;&lt;a href=&quot;javascript:closeMsg()&quot;&gt;[Закрыть]&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Нажмите на &lt;a onclick=&quot;textMsg('Спасибо, что нажали на ссылку!')&quot;&gt;  
+    ссылку для открытия сообщения&lt;/a&gt;.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

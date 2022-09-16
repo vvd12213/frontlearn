@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут span</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут span</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>  <p> Определяет число колонок, к которым будут применяться заданные характеристики. 
+    Если этот атрибут отсутствует, то элемент <span class="tag">&lt;col&gt;</span> работает 
+    для одной колонки. Допускается применять атрибут <span class="attribute">span</span> к нескольким колонкам и таким образом формировать группы колонок с одинаковыми 
+    характеристиками.</p><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;col span=&quot;число&quot;&gt;</code></pre></section><h2>Значения</h2><section class="spec"><p> Целое положительное число.</p></section><h2>Значение по умолчанию</h2><section class="spec"><p> 1</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; 
+  &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;COL, атрибут span&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;table width=&quot;700&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;&gt;
+   &lt;col width=&quot;150&quot;&gt;
+   &lt;col span=&quot;5&quot; width=&quot;50&quot; align=&quot;center&quot;&gt;
+   &lt;col span=&quot;4&quot; width=&quot;75&quot; align=&quot;center&quot;&gt;
+   &lt;tr&gt; 
+    &lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;1995&lt;/td&gt;&lt;td&gt;1996&lt;/td&gt;&lt;td&gt;1997&lt;/td&gt;
+    &lt;td&gt;1998&lt;/td&gt;&lt;td&gt;1999&lt;/td&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;2001&lt;/td&gt;
+    &lt;td&gt;2002&lt;/td&gt;&lt;td&gt;2003&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt; 
+    &lt;td&gt;Нефть&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;62&lt;/td&gt;&lt;td&gt;74&lt;/td&gt;&lt;td&gt;57&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Золото&lt;/td&gt;&lt;td&gt;3&lt;/td&gt; &lt;td&gt;6&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;
+    &lt;td&gt;4&lt;/td&gt;&lt;td&gt;69&lt;/td&gt;&lt;td&gt;72&lt;/td&gt;&lt;td&gt;56&lt;/td&gt;&lt;td&gt;47&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Дерево&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;
+    &lt;td&gt;7&lt;/td&gt;&lt;td&gt;73&lt;/td&gt;&lt;td&gt;79&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

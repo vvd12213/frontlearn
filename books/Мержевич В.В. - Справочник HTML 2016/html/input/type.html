@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут type</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут type</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div> <p> Сообщает браузеру, к какому типу относится элемент формы. </p><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;input type=&quot;button|checkbox|file|hidden|image|password|radio|reset|submit|text&quot;&gt;</code></pre></section><h2>Значения</h2><section class="spec"><p> В табл. 1 перечислены возможные значения атрибута <span class="attribute">type</span> и получаемый вид поля формы. </p>
+  <table class="data">
+    <caption>
+      Табл. 1. Значения  type
+    </caption>
+    <tr>
+      <th>Тип</th>
+      <th>Описание</th>
+      <th>Вид</th>
+    </tr>
+    <tr>
+      <td class="sel">button</td>
+      <td>Кнопка.</td>
+      <td><input type="submit" name="Submit" value="Кнопка"></td>
+    </tr>
+    <tr>
+      <td class="sel">checkbox</td>
+      <td>Флажки. Позволяют выбрать более одного варианта из предложенных.</td>
+      <td><input type="checkbox" name="checkbox" value="checkbox">
+        Пиво
+        <input type="checkbox" name="checkbox2" value="checkbox">
+        Чай
+        <input type="checkbox" name="checkbox3" value="checkbox">
+      Кофе </td>
+    </tr>
+    <tr>
+      <td class="sel">file</td>
+      <td>Поле для ввода имени файла, который пересылается на сервер.</td>
+      <td><input type="file" name="file" /></td>
+    </tr>
+    <tr>
+      <td class="sel">hidden</td>
+      <td>Скрытое поле. Оно никак не отображается на веб-странице.</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="sel">image</td>
+      <td>Поле с изображением. При нажатии на рисунок данные формы отправляются 
+        на сервер.</td>
+      <td><img src="../../assets/images/html/imgbutton.gif" alt=""></td>
+    </tr>
+    <tr>
+      <td class="sel">password</td>
+      <td>Обычное текстовое поле, но отличается от него тем, что все символы показываются 
+        звездочками. Предназначено для того, чтобы никто не подглядел вводимый пароль.</td>
+      <td><input type="password" name="textfield" /></td>
+    </tr>
+    <tr>
+      <td class="sel">radio</td>
+      <td>Переключатели. Используются, когда следует выбрать один вариант из нескольких 
+        предложенных.</td>
+      <td align="left"><input type="radio" name="radiobutton" value="radiobutton">
+        Пиво
+        <input type="radio" name="radiobutton" value="radiobutton">
+        Чай
+        <input type="radio" name="radiobutton" value="radiobutton">
+      Кофе</td>
+    </tr>
+    <tr>
+      <td class="sel">reset</td>
+      <td>Кнопка для возвращения данных формы в первоначальное значение. </td>
+      <td><input name="Submit2" type="reset" /></td>
+    </tr>
+    <tr>
+      <td class="sel">submit</td>
+      <td>Кнопка для отправки данных формы на сервер. </td>
+      <td><input type="submit" name="Submit22" /></td>
+    </tr>
+    <tr>
+      <td class="sel">text</td>
+      <td>Текстовое поле. Предназначено для ввода символов с помощью клавиатуры.</td>
+      <td><input type="text" name="textfield2" /></td>
+    </tr>
+  </table>
+  <p>В HTML5 добавлены новые значения, представленные в табл.&nbsp;2.</p>
+  <table class="data">
+    <caption>
+      Табл. 2. Значения  type в HTML5
+    </caption>
+    <tr>
+      <th>Тип</th>
+      <th>Описание</th>
+    </tr>
+    <tr>
+      <td class="sel">color</td>
+      <td>Виджет для выбора цвета.</td>
+    </tr>
+    <tr>
+      <td class="sel">date</td>
+      <td>Поле для выбора календарной даты.</td>
+    </tr>
+    <tr>
+      <td class="sel">datetime</td>
+      <td>Указание даты и времени.</td>
+    </tr>
+    <tr>
+      <td class="sel">datetime-local</td>
+      <td>Указание местной даты и времени.</td>
+    </tr>
+    <tr>
+      <td class="sel">email</td>
+      <td>Для адресов электронной почты.</td>
+    </tr>
+    <tr>
+      <td class="sel">number</td>
+      <td>Ввод чисел.</td>
+    </tr>
+    <tr>
+      <td class="sel">range</td>
+      <td>Ползунок для выбора чисел в указанном диапазоне.</td>
+    </tr>
+    <tr>
+      <td class="sel">search</td>
+      <td>Поле для поиска.</td>
+    </tr>
+    <tr>
+      <td class="sel">tel</td>
+      <td>Для телефонных номеров.</td>
+    </tr>
+    <tr>
+      <td class="sel">time</td>
+      <td>Для времени.</td>
+    </tr>
+    <tr>
+      <td class="sel">url</td>
+      <td>Для веб-адресов.</td>
+    </tr>
+    <tr>
+      <td class="sel">month</td>
+      <td>Выбор месяца.</td>
+    </tr>
+    <tr>
+      <td class="sel">week</td>
+      <td>Выбор недели.</td>
+    </tr>
+  </table>
+<p>Поддержка этих значений браузерами показана в табл.&nbsp;3.</p>
+  <table class="data browser">
+    <caption>Табл. 3. Поддержка браузерами значений HTML5</caption>
+    <tr class="br">
+      <td style="text-align:left">Значение</td>
+      <td><span class="ie">IE</span></td>
+      <td><span class="ed">Edge</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+      <td><span class="an">Android</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">color</td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>14</span></td>
+      <td class="yes"><span>20</span></td>
+      <td class="yes"><span>11.5</span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>29</span></td>
+      <td class="yes"><span>4.4</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">date</td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>13</span></td>
+      <td class="yes"><span>20</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>4.4</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">datetime</td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>20</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>4.4</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">datetime-local</td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>20</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>4.4</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">email</td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>3</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">month</td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>13</span></td>
+      <td class="yes"><span>20</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>4.4</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">number</td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>29</span></td>
+      <td class="warn"><span>4</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">range</td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="yes"><span>3.1</span></td>
+      <td class="yes"><span>23</span></td>
+      <td class="yes"><span>4.3</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">search</td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>2.3</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">tel</td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>2.3</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">time</td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>13</span></td>
+      <td class="yes"><span>20</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>4.4</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">url</td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>15</span></td>
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>4</span></td>
+    </tr>
+    <tr class="sp">
+      <td style="text-align:left">week</td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>13</span></td>
+      <td class="yes"><span>20</span></td>
+      <td class="yes"><span>10.1</span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>4.4</span></td>
+    </tr>
+</table></section><h2>Значение по умолчанию</h2><section class="spec"><p class="value"> text</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;input, атрибут type&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;  
+  &lt;form action=&quot;input10.php&quot;&gt;
+   &lt;p&gt;&lt;input type=&quot;radio&quot; name=&quot;drink&quot; value=&quot;rad1&quot;&gt; Пиво&lt;Br&gt;
+   &lt;input type=&quot;radio&quot; name=&quot;drink&quot; value=&quot;rad2&quot;&gt; Чай&lt;Br&gt;
+   &lt;input type=&quot;radio&quot; name=&quot;drink&quot; value=&quot;rad3&quot;&gt; Кофе&lt;/p&gt;
+   &lt;p&gt;&lt;input type=&quot;image&quot; src=&quot;image/imgbutton.gif&quot;&gt;&lt;/p&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+ <pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;input, атрибут type&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;   
+  &lt;form&gt;
+  &lt;p&gt;Введите число от 1 до 10&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;range&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;&lt;/p&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Примечание</h2><section class="spec">  <p>Android для типа <span class="value">number</span> не поддерживает атрибуты <span class="attribute">step</span>, <span class="attribute">min</span> и <span class="attribute">max</span>.</p></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

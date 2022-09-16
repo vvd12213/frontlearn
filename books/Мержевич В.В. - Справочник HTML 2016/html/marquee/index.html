@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;marquee&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;marquee&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p>Элемент <span class="tag">&lt;marquee&gt;</span> создаёт бегущую строку на странице. 
+    На самом деле содержимое контейнера <span class="tag">&lt;marquee&gt;</span> не ограничивается строками и позволяет перемещать (скролировать) любые элементы 
+    веб-страницы &#8212; изображения, текст, таблицы, элементы форм и т.&nbsp;д. Перемещение 
+    можно задать не только по горизонтали, но и по вертикали, в этом случае указываются 
+    размеры области, в которой будет происходить движение.</p>
+<p class=note>Это нестандартный элемент, взамен него используйте стили.</p><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;marquee&gt;...&lt;/marquee&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec">   <dl class="param">
+    <dt><a href="behavior.html">behavior</a></dt>
+    <dd>Задаёт тип движения содержимого контейнера <span class="tag">&lt;marquee&gt;</span>. </dd>
+    <dt><a href="bgcolor.html">bgcolor</a></dt>
+    <dd>Цвет фона. </dd>
+    <dt><a href="direction.html">direction</a></dt>
+    <dd>Указывает направление движения содержимого контейнера <span class="tag">&lt;marquee&gt;</span>.</dd>
+    <dt><a href="height.html">height</a></dt>
+    <dd> Высота области прокрутки.</dd>
+    <dt><a href="hspace.html">hspace</a></dt>
+    <dd>Горизонтальные поля вокруг контента.</dd>
+    <dt><a href="loop.html">loop</a></dt>
+    <dd>Задаёт, сколько раз будет прокручиваться содержимое. </dd>
+    <dt><a href="scrollamount.html">scrollamount</a></dt>
+    <dd>Скорость движения контента. </dd>
+    <dt><a href="scrolldelay.html">scrolldelay</a></dt>
+    <dd>Величина задержки в миллисекундах между движениями.</dd>
+    <dt><a href="truespeed.html">truespeed</a></dt>
+    <dd>Отменяет встроенный ограничитель скорости при низких значениях атрибута <span class="attribute">scrolldelay</span>.</dd>
+    <dt><a href="vspace.html">vspace</a></dt>
+    <dd>Вертикальные поля вокруг содержимого.</dd>
+    <dt><a href="width.html">width</a></dt>
+    <dd>Ширина области прокрутки.</dd>
+  </dl></section><h2>Пример</h2><section class="spec">  <pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; 
+  &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;MARQUEE&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;marquee behavior=&quot;alternate&quot; direction=&quot;left&quot; bgcolor=&quot;#ffcc00&quot;&gt;
+    Атомистика контролирует трансцендентальный катарсис.
+  &lt;/marquee&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Примечание</h2><section class="spec"><p>В качестве альтернативы <span class="tag">&lt;marquee&gt;</span> применяется стилевое свойство <span class="attribute">animation</span>.</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;marquee&lt;/title&gt;
+  &lt;style&gt;
+   .marquee {
+    overflow: hidden;
+    white-space: nowrap; /* Запрещаем переносы слов */
+    animation: marquee 10s linear infinite alternate;
+    background: #ffcc00;
+    padding: 5px;
+   }
+   @keyframes marquee {
+    from { text-indent: 100%; }
+    to { text-indent: 0; }
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;marquee&quot;&gt;Атомистика контролирует трансцендентальный катарсис.&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Адрес</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Адрес</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>  <p>Адресом называется путь к документу, например, к графическому  файлу. Адрес необходим в тех случаях, когда делается ссылка на веб-страницу или  загружается определённый файл. Например, в элементе <span class="tag">&lt;img&gt;</span> адрес используется в качестве значения атрибута <span class="attribute">src</span>,  он задаёт путь к файлу с изображением.</p>
+  <p> Синонимом адреса выступает URL (Universal Resource Locator, универсальный  указатель ресурсов), различают абсолютные и относительные адреса.</p>
+<h3>Абсолютные адреса</h3>
+  <p>Подобные адреса работают везде и всюду независимо от имени  сайта или веб-страницы, где задан URL, и начинаются всегда с указания  протокола передачи данных. Для веб-страниц это обычно HTTP (HyperText Transfer  Protocol, протокол передачи гипертекста), соответственно, абсолютные адреса  начинаются с ключевого слова http://.</p>
+
+  <p> Абсолютные адреса применяются в первую очередь для  указания на другой сетевой ресурс и достаточно редко используются в рамках  одного сайта. </p>
+  <h3>Относительные адреса</h3>
+  <p>Относительные адреса указываются от корня сайта или  текущего документа. Например, код <span class="var">&lt;img src=&quot;pic.gif&quot;&gt;</span> означает  загрузить графический файл с именем pic.gif,  который располагается в той же папке, что и сама веб-страница. Далее рассмотрим  несколько примеров таких адресов.</p>
+  <p><strong>/</strong><br />
+    Адрес указывает обычно на файл index.html, который  находится в корне сайта. Если файл index.html отсутствует, браузер, как  правило, показывает список файлов, находящихся в данном каталоге. Имя файла не  обязательно должно быть index.html, этот параметр меняется  через настройки <span class="term">веб-сервера</span>&nbsp;&#8212;  так называется программа, которая анализирует приходящие от браузера запросы и передаёт  ему документы, показываемые пользователю.</p>
+  <p><strong>/images/pic.gif</strong><br />
+    Слэш (символ /) перед адресом говорит о том, что адресация  начинается от корня сайта. Ссылка ведёт на рисунок pic.gif, который находится в  папке images. А та в свою очередь размещена в корне сайта.</p>
+  <p><strong>../help/me.html</strong><br />
+    Две точки перед именем указывают браузеру перейти на  уровень выше в списке каталогов сайта и там &laquo;поискать&raquo; в папке help файл me.html.</p>
+<p><strong>manual/info.html</strong><br />
+    Если перед именем папки нет никаких дополнительных  символов, вроде точек или слэша, то папка размещена внутри текущего  каталога, а уже в ней располагается файл info.html.</p>
+<p class="note"> Адреса относительно корня сайта вроде /demo/ работают только под управлением  веб-сервера и на локальном компьютере не применимы.</p><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Ссылка&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href=&quot;http://htmlbook.ru/html/body&quot;&gt;Описание тега BODY&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>В данном примере текстовая ссылка ведет на сайт htmlbook.ru и указывает на веб-страницу с именем body.html, которая располагается в каталоге html. </p>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+   &lt;title&gt;Ссылки&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;&lt;a href=&quot;images/xxx.jpg&quot;&gt;Посмотрите на мою фотографию!&lt;/a&gt;&lt;/p&gt;
+   &lt;p&gt;&lt;a href=&quot;tip.html&quot;&gt;Как сделать такое же фото?&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>В данном примере используется относительный путь к графическому файлу.</p></section></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

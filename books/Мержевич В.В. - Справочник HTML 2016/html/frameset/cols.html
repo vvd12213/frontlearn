@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут cols</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут cols</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>  <p> Задаёт размеры или пропорции колонок фреймов в структуре <span class="tag">&lt;frameset&gt;</span>. 
+    Если создаются несколько колонок, то для атрибута <span class="attribute">cols</span> необходимо установить определённое значение. Для этого используется три варианта:</p>
+  <ol>
+    <li> размер в пикселях;</li>
+    <li> размер в процентах от доступной ширины фрейма;</li>
+    <li> символ звездочки (*), который обозначает всю свободную ширину, оставшуюся 
+      после указания размеров в пикселях или процентах.</li>
+  </ol>
+  <p>Используйте значение в пикселях, когда требуется установить размер фрейма заданной 
+    ширины. Это особенно полезно для отображения содержания заданных размеров, например, 
+    изображения. Проценты удобно применять для пропорционального разделения фреймов, 
+    в этом случае, независимо от размера окна браузера пропорции будут сохраняться, 
+    главное, чтобы суммарная ширина колонок равнялась 100%. Если значения не составляют 
+    в сумме 100%, браузер отобразит фреймы, но ширина их будет установлена не точно. 
+    Наконец, если требуется отвести оставшееся место под фрейм, то используется 
+    символ звездочки. В этом случае браузер вычисляет ширину фрейма, когда размеры 
+    для остальных фреймов уже установлены. Допускается смешивать отдельные типы 
+    значения, перечисляя их через запятую. Тогда работа по расчёту нужной ширины 
+    выпадает на долю браузера. </p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">&lt;frameset cols=&quot;ширина 1, ширина 2, ...&quot;&gt;...&lt;/frameset&gt;</code></pre></section><h2>Значения</h2><section class="spec"><p> Значения, перечисленные через запятую в виде пикселей (px или другие пометки 
+    указывать не требуется), процентов или символа *. </p></section><h2>Значение по умолчанию</h2><section class="spec"><p> 100%</p></section><h2>Пример</h2><section class="spec">  <pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot;
+  &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;FRAMESET, атрибут cols&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;frameset cols=&quot;100,*,20%&quot;&gt;
+   &lt;frame src=&quot;page/left.html&quot; name=&quot;leftFrame&quot;&gt;
+   &lt;frame src=&quot;page/main.html&quot; name=&quot;mainFrame&quot;&gt;
+   &lt;frame src=&quot;page/right.html&quot; name=&quot;rightFrame&quot;&gt;
+ &lt;/frameset&gt;
+&lt;/html&gt;</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

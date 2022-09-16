@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут itemprop</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут itemprop</h1>
+
+		<p>Атрибут <span class="attribute">itemprop</span> используется для добавления свойств словаря микроданных к элементу. Имя свойства определяется значением <span class="attribute">itemprop</span>, а значение свойства определяется содержимым HTML-элемента, к примеру, текстом который располагается внутри элемента.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">itemprop="&lt;свойство&gt;"</code></pre></section><h2>Значения</h2><section class="spec"><p>Свойство определяется словарём данных. К примеру, на <a href="http://schema.org/docs/schemas.html">Schema.org</a>, которую поддерживает Яндекс и Google, перечислены словари с их возможными свойствами.</p></section><h2>Значение по умолчанию</h2><section class="spec"><p>Нет.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;itemprop&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div itemscope itemtype=&quot;http://schema.org/Movie&quot;&gt;
+   &lt;div&gt;
+    &lt;h1 itemprop=&quot;name&quot;&gt;Облачный атлас &lt;/h1&gt;
+    &lt;span itemprop=&quot;alternativeHeadline&quot;&gt;Cloud Atlas&lt;/span&gt;
+    &lt;img src=&quot;http://st.kinopoisk.ru/images/film/464484.jpg&quot; alt=&quot;Облачный атлас (Cloud Atlas)&quot; itemprop=&quot;image&quot;/&gt;
+   &lt;/div&gt;
+   &lt;span&gt;
+    &lt;a itemprop=&quot;director&quot; href=&quot;/name/23330/&quot;&gt;Лана Вачовски&lt;/a&gt;,
+    &lt;a itemprop=&quot;director&quot; href=&quot;/name/26439/&quot;&gt;Том Тыквер&lt;/a&gt;,
+    &lt;a itemprop=&quot;director&quot; href=&quot;/name/23329/&quot;&gt;Энди Вачовски&lt;/a&gt;
+   &lt;/span&gt;
+   &lt;span&gt;
+    &lt;a itemprop=&quot;producer&quot; href=&quot;/name/26437/&quot;&gt;Штефан Арндт&lt;/a&gt;,
+    &lt;a itemprop=&quot;producer&quot; href=&quot;/name/31351/&quot;&gt;Грант Хилл&lt;/a&gt;,
+    &lt;a itemprop=&quot;producer&quot; href=&quot;/name/26439/&quot;&gt;Том Тыквер&lt;/a&gt;,
+    &lt;a href=&quot;/film/464484/cast/#producer&quot; &gt;и другие&lt;/a&gt;.
+   &lt;/span&gt;
+   &lt;span&gt;
+    &lt;a itemprop=&quot;musicBy&quot; href=&quot;/name/312865/&quot;&gt;Райнхольд Хайль&lt;/a&gt;,
+    &lt;a itemprop=&quot;musicBy&quot; href=&quot;/name/608605/&quot;&gt;Джонни Клаймек&lt;/a&gt;,
+    &lt;a itemprop=&quot;musicBy&quot; href=&quot;/name/26439/&quot;&gt;Том Тыквер&lt;/a&gt;.
+   &lt;/span&gt;
+   &lt;span&gt;
+    &lt;a itemprop=&quot;genre&quot; href=&quot;/level/10/m_act%5Bgenre%5D/2/&quot;&gt;фантастика&lt;/a&gt;,
+    &lt;a itemprop=&quot;genre&quot; href=&quot;/level/10/m_act%5Bgenre%5D/8/&quot;&gt;драма&lt;/a&gt;,
+    &lt;a itemprop=&quot;genre&quot; href=&quot;/level/10/m_act%5Bgenre%5D/17/&quot;&gt;детектив&lt;/a&gt;,
+   &lt;/span&gt;  
+   &lt;span class=&quot;title&quot;&gt;В главных ролях:&lt;/span&gt;
+   &lt;div&gt; 
+    &lt;a itemprop=&quot;actor&quot; href=&quot;/name/9144/&quot;&gt;Том Хэнкс&lt;/a&gt;
+    &lt;a itemprop=&quot;actor&quot; href=&quot;/name/1179/&quot;&gt;Холли Берри&lt;/a&gt;
+    &lt;a itemprop=&quot;actor&quot; href=&quot;/name/38704/&quot;&gt;Джим Броудбент&lt;/a&gt;
+   &lt;/div&gt;
+   &lt;span itemprop=&quot;description&quot;&gt;Шесть историй — пять реинкарнаций, 
+    происходящих в разное время,тесно переплетаются между собой…&lt;/span&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.w3.org/TR/microdata/#names:-the-itemprop-attribute" hreflang="en" lang="en">HTML Microdata</a></td>
+      <td><span>W3C Working Group Note</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

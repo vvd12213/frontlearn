@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут srcset</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут srcset</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="ed">Edge</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="no"><span></span></td>
+      <td class="yes"><span>13</span></td>
+      <td class="yes"><span>38</span></td>
+      <td class="yes"><span>25</span></td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>38</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="no"><span></span></td>
+			<td class="yes"><span>38</span></td>
+			<td class="yes"><span>35</span></td>
+			<td class="yes"><span>9.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div><p>Список из одной или нескольких строк, разделённых запятыми, указывающих набор возможных изображений для отображения в браузере. Каждая строка может состоять их следующих частей:</p>
+<ul>
+  <li>адрес изображения;</li>
+  <li> дескриптор ширины, который представляет собой целое положительное число, за которым следует w (например: 600w). Дескриптор подсказывает браузеру, для какой контрольной точки использовать данное изображение;</li>
+  <li> дескриптор плотности пикселей, представляет собой положительное десятичное число, за которым сразу следует х. </li>
+</ul>
+<p>Каждая строка в списке должна содержать по крайней мере дескриптор ширины или плотности пикселей. </p>
+<p>Браузер выбирает наиболее подходящее изображение для отображения в данный момент времени.</p>
+<p>Атрибут <span class="attribute">srcset</span> имеет эффект только тогда, когда элемент <span class="tag">&lt;source&gt;</span> располагается непосредственно внутри элемента <span class="tag">&lt;picture&gt;</span>.</p><h2>Значение по умолчанию</h2><section class="spec">  <p> Нет. </p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;srcset&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;picture&gt;
+   &lt;source srcset=&quot;image/mushroom_landscape.jpg, image/mushroom_retina.jpg 2x&quot; media=&quot;(min-width: 60em)&quot;&gt;
+   &lt;img src=&quot;image/mushroom.jpg&quot; alt=&quot;&quot;&gt;
+  &lt;/picture&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

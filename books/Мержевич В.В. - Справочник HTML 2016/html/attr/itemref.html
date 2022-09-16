@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут itemref</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут itemref</h1>
+
+		<p>Свойства, которые не являются потомками элемента с атрибутом <span class="attribute">itemscope</span>, можно связать с элементом с помощью атрибута <span class="attribute">itemref</span>. В значении данного атрибута указывается список идентификаторов элементов, которые содержат дополнительные свойствами в других местах документа.</p>
+<p>Атрибут <span class="attribute">itemref</span> может быть указан только для элементов, которые содержат атрибут <span class="attribute">itemscope</span>.</p>
+<p>Атрибут <span class="attribute">itemref</span> не является частью модели микроданных. Это всего лишь синтаксическая конструкция, помогающая авторам добавлять аннотацию на страницу, которая не содержит удобную древовидную структуру.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">itemref="&lt;идентификатор&gt;"</code></pre></section><h2>Значения</h2><section class="spec"><p>Одно или несколько значений атрибута <span class="attribute">id</span> разделённых пробелом.</p></section><h2>Значение по умолчанию</h2><section class="spec"><p>Нет.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;itemref&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div itemscope itemtype=&quot;http://schema.org/Product&quot; itemref=&quot;name thumb description&quot;&gt;&lt;/div&gt;
+
+  &lt;h1 itemprop=&quot;name&quot; id=&quot;name&quot;&gt;Iphone 6 plus 16 GB&lt;/h1&gt;
+  &lt;img src=&quot;http://imageexample.com/iphone6plus.jpg&quot; itemprop=&quot;image&quot; id=&quot;thumb&quot;&gt;
+  &lt;div itemprop=&quot;description&quot; id=&quot;description&quot;&gt;iPhone 6 не просто больше. Он лучше во всех отношениях. Больше, 
+  но при этом значительно тоньше. Мощнее, но при этом исключительно экономичный. 
+  Его гладкая металлическая поверхность плавно переходит в стекло нового HD-дисплея Retina, 
+  образуя цельный, законченный дизайн. Его аппаратная часть идеально работает с программным 
+  обеспечением. Это новое поколение iPhone, улучшенное во всём&lt;/div&gt;    
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.w3.org/TR/microdata/#attr-itemref" hreflang="en" lang="en">HTML Microdata</a></td>
+      <td><span>W3C Working Group Note</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

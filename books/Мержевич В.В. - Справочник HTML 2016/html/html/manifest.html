@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибут manifest</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Атрибут manifest</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>11.5</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>3.5</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>3.5</span></td>
+			<td class="yes"><span>12</span></td>
+			<td class="yes"><span>3.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>  <p> Атрибут <span class="attribute">manifest</span> реализует механизм кэширования, который позволяет создавать офлайновые приложения, т.&nbsp;е. работающие в автономном режиме без непосредственного подключения к Интернету. При первой загрузке страницы браузер обычно просит сохранить данные для своей работы, а затем уже обращается к ним при необходимости. </p>
+  <p>В качестве значения атрибута <span class="attribute">manifest</span> указывается относительный или абсолютный путь к текстовому файлу, он называется &laquo;файл манифеста&raquo; или просто &laquo;манифест&raquo;. Имя и расположение файла может быть любым, но он должен отдаваться сервером с заголовком <span class="var">text/cache-manifest</span>. Например, для веб-сервера Apache в файле .htaccess расположенным в корне сайта следует прописать такую строку. </p>
+  <pre><code>AddType text/cache-manifest .cache</code></pre>
+  <p>В этом случае файл манифеста имеет расширение cache. Сам манифест информирует браузер о том, какие ресурсы необходимо сохранить в локальном кэше. Этот список может содержать HTML и CSS-файлы, изображения, скрипты. Имена файлов перечисляются внутри секций описанных в табл.&nbsp;1. </p>
+
+  <table class="data">
+    <caption>Табл. 1. Разделы манифеста</caption>
+    <tr>
+      <th>Раздел</th>
+      <th>Описание</th>
+    </tr>
+    <tr>
+      <td>CACHE MANIFEST </td>
+      <td>Этой обязательной строкой должен начинаться любой манифест.</td>
+    </tr>
+    <tr>
+      <td>CACHE: </td>
+      <td>Содержит перечень ресурсов, которые браузер должен кэшировать. Данный раздел используется по умолчанию, если его не указать и нет других разделов, то записи в манифесте причисляются к этому разделу.</td>
+    </tr>
+    <tr>
+      <td>NETWORK: </td>
+      <td>Список ресурсов, которые доступны только при подключении к сети. Обычно в этот раздел входят программы выполняемые на стороне сервера.</td>
+    </tr>
+    <tr>
+      <td>FALLBACK: </td>
+      <td>Список замещающих файлов, которые будут использоваться при отсутствии подключения к сети. Допустимо использовать символ * для обозначения всех файлов. Например, <span class="var">*.php /offline.html</span> означает, что вместо любого файла с расширением php будет показана страница offline.html. </td>
+    </tr>
+  </table><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;html manifest=&quot;URL&quot;&gt;</code></pre></section><h2>Значения</h2><section class="spec"><p>В качестве значения указывается  адрес файла манифеста<span class="value"></span>.</p></section><h2>Значение по умолчанию</h2><section class="spec"> <p> Нет.</p></section><h2>Пример</h2><section class="spec"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html manifest=&quot;22.cache&quot;&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;22 хода&lt;/title&gt;
+  &lt;link href=&quot;22/22.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;script src=&quot;22/22.js&quot;&gt;&lt;/script&gt; 
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div id=&quot;main&quot;&gt;
+   &lt;h1&gt;22 хода&lt;/h1&gt;
+   &lt;canvas id=&quot;game&quot; width=&quot;400&quot; height=&quot;400&quot;&gt;
+     &lt;img src=&quot;image/old.png&quot; alt=&quot;&quot;&gt;
+   &lt;/canvas&gt;
+   &lt;p&gt;Ходов: &lt;span id=&quot;move&quot;&gt;0&lt;/span&gt;
+   &lt;span id=&quot;msg&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+   &lt;h3&gt;Цель игры&lt;/h3&gt;
+   &lt;p&gt;Вам необходимо за 22 хода сгруппировать все серые фишки
+   на кружках в верхнем квадрате, а чёрные фишки&amp;nbsp;&amp;#8212; в нижнем. 
+   Кружки с точкой должны оказаться незанятыми.&lt;/p&gt;
+   &lt;p&gt;Фишка может перемещаться только по линиям&amp;nbsp;&amp;#8212; по горизонтали
+   или вертикали, а также перепрыгивать через фишку, если за ней есть свободное 
+   поле.&lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre> 
+
+<p>Содержимое файла 22.cache показано ниже.</p>
+
+<pre><code>CACHE MANIFEST
+# Версия 1.0
+
+CACHE:
+22.css 
+22.js
+../image/old.png</code></pre></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

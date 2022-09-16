@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;input&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;input&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>2</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p><span class="tag">&lt;input&gt;</span> является одним из разносторонних 
+    элементов формы и позволяет создавать разные части интерфейса и обеспечивать 
+    взаимодействие с пользователем. Главным образом <span class="tag">&lt;input&gt;</span> предназначен для создания текстовых полей, различных кнопок, переключателей 
+    и флажков. Хотя элемент <span class="tag">&lt;input&gt;</span> не требуется 
+    помещать внутрь контейнера <span class="tag">&lt;form&gt;</span>, определяющего 
+    форму, но если введенные пользователем данные должны быть отправлены на сервер, 
+    где их обрабатывает серверная программа, то указывать <span class="tag">&lt;form&gt;</span> обязательно. То же самое обстоит и в случае обработки данных с помощью клиентских 
+   приложений, например, скриптов на языке JavaScript.</p>
+  <p>Основной атрибут <span class="tag">&lt;input&gt;</span>, определяющий 
+    вид элемента &#8212; <span class="attribute">type</span>. Он позволяет задавать 
+    следующие элементы формы: текстовое поле (<span class="value">text</span>), 
+    поле с паролем (<span class="value">password</span>), переключатель (<span class="value">radio</span>), 
+    флажок (<span class="value">checkbox</span>), скрытое поле (<span class="value">hidden</span>), 
+    кнопка (<span class="value">button</span>), кнопка для отправки формы (<span class="value">submit</span>), 
+    кнопка для очистки формы (<span class="value">reset</span>), поле для отправки 
+    файла (<span class="value">file</span>), кнопка с изображением (<span class="value">image</span>) и др. 
+    Для каждого элемента существует свой список атрибутов, которые определяют его 
+    вид и характеристики. Кроме того, в HTML5 добавлено еще более десятка новых элементов.</p><h2>Синтаксис</h2><section class="spec"><pre><code data-language="html">&lt;input атрибуты&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Не требуется</section><h2>Аттрибуты</h2><section class="spec">   <dl class="param">
+    <dt><a href="accept.html">accept</a></dt>
+    <dd>Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов.</dd>
+    <dt><a href="align.html">align</a></dt>
+    <dd> Определяет выравнивание изображения. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="alt.html">alt</a></dt>
+    <dd>Альтернативный текст для кнопки с изображением.</dd>
+    <dt><a href="autocomplete.html">autocomplete</a></dt>
+    <dd>Включает или отключает автозаполнение. <span class="attr-HTML5"></span></dd>
+    <dt><a href="autofocus.html">autofocus</a></dt>
+    <dd>Устанавливает фокус в поле формы. <span class="attr-HTML5"></span></dd>
+    <dt><a href="border.html">border</a></dt>
+    <dd>Толщина рамки вокруг изображения. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="checked.html">checked</a></dt>
+    <dd>Предварительно активированный переключатель или флажок. </dd>
+    <dt><a href="disabled.html">disabled</a></dt>
+    <dd>Блокирует доступ и изменение элемента.</dd>
+    <dt><a href="form.html">form</a></dt>
+    <dd>Связывает поле с формой по её идентификатору. <span class="attr-HTML5"></span></dd>
+    <dt><a href="formaction.html">formaction</a></dt>
+    <dd>Определяет адрес обработчика формы. <span class="attr-HTML5"></span></dd>
+    <dt><a href="formenctype.html">formenctype</a></dt>
+    <dd>Устанавливает способ кодирования данных формы при их отправке на сервер. <span class="attr-HTML5"></span></dd>
+    <dt><a href="formmethod.html">formmethod</a></dt>
+    <dd>Сообщает браузеру каким методом следует передавать данные формы на сервер. <span class="attr-HTML5"></span></dd>
+    <dt><a href="formnovalidate.html">formnovalidate</a></dt>
+    <dd>Отменяет встроенную проверку данных на корректность. <span class="attr-HTML5"></span></dd>
+    <dt><a href="formtarget.html">formtarget</a></dt>
+    <dd>Определяет окно или фрейм в которое будет загружаться результат, возвращаемый обработчиком формы. <span class="attr-HTML5"></span></dd>
+    <dt><a href="list.html">list</a></dt>
+    <dd>Указывает на список вариантов, которые можно выбирать при вводе текста. <span class="attr-HTML5"></span></dd>
+    <dt><a href="max.html">max</a></dt>
+    <dd>Верхнее значение для ввода числа или даты. <span class="attr-HTML5"></span></dd>
+    <dt><a href="maxlength.html">maxlength</a></dt>
+    <dd>Максимальное количество символов разрешённых в тексте.</dd>
+    <dt><a href="min.html">min</a></dt>
+    <dd>Нижнее значение для ввода числа или даты. <span class="attr-HTML5"></span></dd>
+    <dt><a href="multiple.html">multiple</a></dt>
+    <dd>Позволяет загрузить несколько файлов одновременно. <span class="attr-HTML5"></span></dd>
+    <dt><a href="name.html">name</a></dt>
+    <dd>Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать.</dd>
+    <dt><a href="pattern.html">pattern</a></dt>
+    <dd>Устанавливает шаблон ввода. <span class="attr-HTML5"></span></dd>
+    <dt><a href="placeholder.html">placeholder</a></dt>
+    <dd>Выводит подсказывающий текст. <span class="attr-HTML5"></span></dd>
+    <dt><a href="readonly.html">readonly</a></dt>
+    <dd>Устанавливает, что поле не может изменяться пользователем.</dd>
+    <dt><a href="required.html">required</a></dt>
+    <dd>Обязательное для заполнения поле. <span class="attr-HTML5"></span></dd>
+    <dt><a href="size.html">size</a></dt>
+    <dd>Ширина текстового поля.</dd>
+    <dt><a href="src.html">src</a></dt>
+    <dd>Адрес графического файла для поля с изображением.</dd>
+    <dt><a href="step.html">step</a></dt>
+    <dd>Шаг приращения для числовых полей. <span class="attr-HTML5"></span></dd>
+    <dt><a href="type.html">type</a></dt>
+    <dd>Сообщает браузеру, к какому типу относится элемент формы.</dd>
+    <dt><a href="value.html">value</a></dt>
+    <dd>Значение элемента. </dd>
+  </dl>
+<p class="more">Также для этого элемента доступны <a href="../attr/common.html">универсальные атрибуты</a> и <a href="../attr/event.html">события</a>.</p></section><h2>Пример</h2><section class="spec">  <pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;INPUT&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;form name=&quot;test&quot; method=&quot;post&quot; action=&quot;input1.php&quot;&gt;
+  &lt;p&gt;&lt;b&gt;Ваше имя:&lt;/b&gt;&lt;br&gt;
+   &lt;input type=&quot;text&quot; size=&quot;40&quot;&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;b&gt;Каким браузером в основном пользуетесь:&lt;/b&gt;&lt;Br&gt;
+   &lt;input type=&quot;radio&quot; name=&quot;browser&quot; value=&quot;ie&quot;&gt; Internet Explorer&lt;Br&gt;
+   &lt;input type=&quot;radio&quot; name=&quot;browser&quot; value=&quot;opera&quot;&gt; Opera&lt;Br&gt;
+   &lt;input type=&quot;radio&quot; name=&quot;browser&quot; value=&quot;firefox&quot;&gt; Firefox&lt;Br&gt;
+  &lt;/p&gt;
+  &lt;p&gt;Комментарий&lt;Br&gt;
+   &lt;textarea name=&quot;comment&quot; cols=&quot;40&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Отправить&quot;&gt;
+   &lt;input type=&quot;reset&quot; value=&quot;Очистить&quot;&gt;&lt;/p&gt;
+ &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <p>Результат данного примера показан на рис. 1.</p>
+  <p class="fig"><img src="../../assets/images/html/tag_input_1.png" alt="Вид элементов формы в браузере" width="665" height="448"></p>
+<p class="figsign">Рис. 1. Вид элементов формы в браузере</p></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://html.spec.whatwg.org/multipage/the-input-element.html#the-input-element" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/forms.html#the-input-element" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.4" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

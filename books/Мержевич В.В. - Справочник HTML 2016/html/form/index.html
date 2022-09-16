@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;form&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;form&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div> <p>Элемент <span class="tag">&lt;form&gt;</span> устанавливает форму на веб-странице. 
+    Форма предназначена для обмена данными между пользователем и сервером. Область 
+    применения форм не ограничена отправкой данных на сервер, с помощью клиентских 
+    скриптов можно получить доступ к любому элементу формы, изменять его и применять 
+  по своему усмотрению. </p>
+  <p>Документ может содержать любое количество форм, но одновременно на сервер может 
+    быть отправлена только одна форма. По этой причине данные форм должны быть независимы 
+    друг от друга.</p>
+  <p>Для отправки формы на сервер используется кнопка Submit, того же можно 
+    добиться, если нажать клавишу <kbd>Enter</kbd> в пределах формы. Если кнопка Submit 
+    отсутствует в форме, клавиша <kbd>Enter</kbd> имитирует её использование.</p>
+  <p>Когда форма отправляется на сервер, управление данными передаётся программе, 
+    заданной атрибутом <span class="attribute">action</span> элемента <span class="tag">&lt;form&gt;</span>. 
+    Предварительно браузер подготавливает информацию в виде пары &laquo;имя=значение&raquo;, 
+    где имя определяется атрибутом <span class="attribute">name</span> элемента <span class="tag">&lt;input&gt;</span>, 
+    а значение введено пользователем или установлено в поле формы по умолчанию. 
+    Если для отправки данных используется метод <span class="value">GET</span>, 
+    то адресная строка может принимать следующий вид.</p>
+  <p class="example">http://www.htmlbook.ru/handler.php?nick=%C2%E0%ED%FF+%D8%E0%EF%EE%F7%EA%E8%ED&amp;page=5</p>
+  <p>Параметры перечисляются после вопросительного знака, указанного после адреса 
+    серверной программы и разделяются между собой символом амперсанда (&amp;). Русские буквы преобразуются в шестнадцатеричное представление (в форме %HH, где HH 
+    &#8212; шестнадцатеричный код для значения ASCII-символа), пробел заменяется 
+    на плюс (+).</p>
+  <p>Допускается внутрь контейнера <span class="tag">&lt;form&gt;</span> помещать другие элементы, при этом сама форма никак не отображается на веб-странице, видны только элементы внутри неё.</p><h2>Синтаксис</h2><section class="spec"> <pre><code data-language="html">&lt;form&gt;
+  ...
+&lt;/form&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec">   <dl class="param">
+    <dt><a href="accept-charset.html">accept-charset</a></dt><br>
+    <dd>Устанавливает кодировку, в которой сервер может принимать и обрабатывать данные.</dd>
+    <dt><a href="action.html">action</a></dt>
+    <dd>Адрес программы или документа, который обрабатывает данные формы. </dd>
+    <dt><a href="autocomplete.html">autocomplete</a></dt>
+    <dd>Включает автозаполнение полей формы. <span class="attr-HTML5"></span></dd>
+    <dt><a href="enctype.html">enctype</a></dt>
+    <dd>Способ кодирования данных формы.</dd>
+    <dt><a href="method.html">method</a></dt>
+    <dd>Метод протокола HTTP.</dd>
+    <dt><a href="name.html">name</a></dt>
+    <dd>Имя формы.</dd>
+    <dt><a href="novalidate.html">novalidate</a></dt>
+    <dd>Отменяет встроенную проверку данных формы на корректность ввода. <span class="attr-HTML5"></span></dd>
+    <dt><a href="target.html">target</a></dt>
+    <dd>Имя окна или фрейма, куда обработчик будет загружать возвращаемый результат.</dd>
+  </dl>
+<p class="more">Также для этого элемента доступны <a href="../attr/common.html">универсальные атрибуты</a> и <a href="../attr/event.html">события</a>.</p></section><h2>Пример</h2><section class="spec"> <pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;FORM&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;form action=&quot;handler.php&quot;&gt;
+  &lt;p&gt;&lt;b&gt;Как по вашему мнению расшифровывается аббревиатура &amp;quot;ОС&amp;quot;?&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;radio&quot; name=&quot;answer&quot; value=&quot;a1&quot;&gt;Офицерский состав&lt;Br&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;answer&quot; value=&quot;a2&quot;&gt;Операционная система&lt;Br&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;answer&quot; value=&quot;a3&quot;&gt;Большой полосатый мух&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot;&gt;&lt;/p&gt;
+ &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <p>Результат данного примера показан на рис. 1. </p>
+  <p class="fig"><img src="../../assets/images/html/tag_form_1.png" alt="Вид элементов формы в окне браузера" width="683" height="292"></p>
+<p class="figsign">Рис. 1. Вид элементов формы в окне браузера </p></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/forms.html#the-form-element" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-PR">Предлагаемая рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.3" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>

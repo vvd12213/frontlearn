@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Элемент &lt;script&gt;</title>
+		<link href="../../assets/css/foundation.min.css" rel="stylesheet">
+		<link href="../../assets/css/style.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>Справочник HTML</header>
+		<main>
+		
+		<h1>Элемент &lt;script&gt;</h1>
+
+		<ul class="tabs" data-tabs id="browser-tabs">
+  <li class="tabs-title is-active"><a href="#desktop" aria-selected="true">Настольные</a></li>
+  <li class="tabs-title"><a href="#mobile">Мобильные</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="browser-tabs">
+	<div class="tabs-panel is-active" id="desktop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="tabs-panel" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div>   <p>Элемент <span class="tag">&lt;script&gt;</span> предназначен для описания скриптов, 
+    может содержать ссылку на программу или её текст на определённом языке. Скрипты 
+    могут располагаться во внешнем файле и связываться с любым HTML-документом. 
+    Такой подход позволяет использовать одни и те же общие функции на многих веб-страницах 
+    и ускоряет их загрузку, т.&nbsp;к. внешний файл кэшируется при первой загрузке, и 
+    скрипт вызывается быстрее при последующих вызовах.</p>
+  <p><span class="tag">&lt;script&gt;</span> может располагаться в заголовке или теле HTML-документа 
+    в неограниченном количестве. В большинстве случаев местоположение скрипта никак 
+    не сказывается на работу программы. Однако скрипты, которые должны выполняться 
+    в первую очередь, обычно помещают в заголовок документа.</p><h2>Синтаксис</h2><section class="spec">  <pre><code data-language="html">&lt;script&gt;
+  ...
+&lt;/script&gt; 
+&lt;script type=&quot;тип&quot; src=&quot;URL&quot;&gt;&lt;/script&gt;</code></pre></section><h2>Закрывающий тег</h2><section class="spec">Обязателен</section><h2>Аттрибуты</h2><section class="spec">   <dl class="param">
+    <dt><a href="async.html">async</a></dt>
+    <dd>Загружает скрипт асинхронно. <span class="attr-HTML5"></span></dd>
+    <dt><a href="defer.html">defer</a></dt>
+    <dd>Откладывает выполнение скрипта до тех пор, пока вся страница не будет загружена 
+      полностью. </dd>
+    <dt><a href="language.html">language</a></dt>
+    <dd>Устанавливает язык программирования на котором написан скрипт. <span class="attr-Obsolete"></span></dd>
+    <dt><a href="src.html">src</a></dt>
+    <dd>Адрес скрипта из внешнего файла для импорта в текущий документ. </dd>
+    <dt><a href="type.html">type</a></dt>
+    <dd>Определяет тип содержимого <span class="tag">&lt;script&gt;</span>. </dd>
+  </dl></section><h2>Пример</h2><section class="spec"> <pre><code data-language="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+  &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;SCRIPT&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    document.write ('&lt;table width=&quot;100%&quot; border=&quot;1&quot;&gt;');
+    for (i=1; i&lt;6; i++) {
+      document.writeln(&quot;&lt;tr&gt;&quot;);
+      for (j=1; j&lt;6; j++) document.write(&quot;&lt;td&gt;&quot; + i + j + &quot;&lt;\/td&gt;&quot;);
+      document.writeln(&quot;&lt;\/tr&gt;&quot;);
+    }
+    document.write (&quot;&lt;\/table&gt; &quot;);
+  &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <p>Результат данного примера показан на рис. 1.</p>
+  <p class="fig"><img src="../../assets/images/html/tag_script.png" alt="Результат работы скрипта" width="567" height="292"></p>
+  <p class="figsign">Рис. 1. Результат работы скрипта</p>
+  <p>В данном примере с помощью скрипта выводится таблица, состоящая из пяти строк и столбцов, которая заполняется числами. </p>
+ 
+<pre class="no-result"><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;SCRIPT&lt;/title&gt;
+  &lt;script&gt;
+  function popup() {
+   document.getElementById('welcome').innerHTML = 'Добро пожаловать!';
+  }
+  &lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body onload=&quot;popup()&quot;&gt; 
+  &lt;div id=&quot;welcome&quot;&gt;&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере внутри элемента с идентификатором <span class="var">welcome</span> выводится текст сообщения.</p></section><h2>Примечание</h2><section class="spec"><p>В HTML5 атрибут <span class="attribute">type</span> можно опустить, он является необязательным и принимает значение <span class="value">text/javascript</span>, если не указан явно. В предыдущих версиях HTML атрибут <span class="attribute">type</span> необходим.</p></section><h2>Спецификация <a data-open="hint-html-spec" class="hint-ref">?</a></h2><section class="spec"><table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/scripting-1.html#script" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.1" hreflang="en" lang="en">HTML 4.01 Specification</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></section><div class="reveal small" id="hint-html-spec" data-reveal>
+<h2>Спецификация</h2>
+<p>Каждая спецификация проходит несколько стадий одобрения.</p>
+<ul>
+  <li>Recommendation (<span class="spec-REC">Рекомендация</span>) —  спецификация одобрена W3C и рекомендована как стандарт.</li>
+  <li>Candidate Recommendation (<span class="spec-CR">Возможная рекомендация</span>) — группа, отвечающая за стандарт, удовлетворена, как он соответствует своим целям, но требуется помощь сообщества разработчиков по реализации стандарта.</li>
+  <li>Proposed Recommendation (<span class="spec-PR">Предлагаемая рекомендация</span>) — на этом этапе документ представлен на рассмотрение Консультативного совета W3C для окончательного утверждения.</li>
+  <li>Working Draft (<span class="spec-WD">Рабочий проект</span>) — более зрелая версия черновика после обсуждения и внесения поправок для рассмотрения сообществом.</li>
+  <li>Editorʼs draft (<span class="spec-ED">Редакторский черновик</span>) — черновая версия стандарта после внесения правок редакторами проекта.</li>
+  <li>Draft (<span class="spec-Draft">Черновик спецификации</span>) — первая черновая версия стандарта.</li>
+</ul>
+<p>Особняком стоит живой стандарт HTML (<span class="spec-Living">Living</span>) — он не придерживается традиционной нумерации версий, поскольку находится в постоянной разработке и обновляется регулярно.</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></main>
+		
+		<footer>
+			<p class="name">Справочник HTML. Версия 10.1 от 11.08.2016</p>
+			<p>&copy; 2002&#8211;2016 Влад Мержевич, по всем вопросам пишите по адресу <a href="mailto:vlad@webref.ru">vlad@webref.ru</a></p>
+			<p><a href="https://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/app.js"></script>
+		<script src="../../assets/js/rainbow.min.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		
+	</body>
+</html>
