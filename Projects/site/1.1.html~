@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Йокогама: cyши-бap </title>
+		<link href="stiles/2.1.css" rel="stylesheet" type="text/css"	>
+	</head>
+<body>
+	<h1> <strong> Суши-бар </strong> <em> Йокогама </em> </h1>
+	<p class="picture"> <img src="images/sushi.jpg" title="sushi"> </p
+	<p> У нас вы найдете: сашими, суши, роллы,
+	соусы, горячие блюда. </p>
+	<p> Также - безалкогольные напитки. <img src="images/drink.jpg" title="drink"> </p>
+	<p>сок</p>
+	<p>квас</p>
+	<p class="greeting">Ждем вас!</p>
+	<address>Роствская область, Азовский район, село Семибалки, переулок Калинина, 2</address>
+	
+</body>
+</html>
